@@ -457,6 +457,7 @@
         .footer-section {
             flex: 1;
             min-width: 250px;
+            position: relative;
         }
         
         .footer-section h3 {
@@ -523,6 +524,29 @@
             font-size: 3rem;
             color: var(--secondary);
             margin-bottom: 1rem;
+        }
+        
+        /* Instructions Section */
+        .instructions {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .instructions h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .instructions ol {
+            padding-left: 1.5rem;
+        }
+        
+        .instructions li {
+            margin-bottom: 0.5rem;
         }
         
         /* Responsive Design */
@@ -616,7 +640,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Hi, I'm <span style="color: var(--secondary);">Daniel Thuo</span></h1>
-                <p>Full-Stack Developer | Accountant | Project Manager | Certified Mediator</p>
+                <b><p>Full-Stack Developer | Accountant | Project Manager |Certified Mediator | Community Development | Ministry Leader </p></b>
                 <p>I build web applications with PHP, JavaScript, and Python — and I love data visualization. With over 10 years of experience in financial management and community development, I bring a unique perspective to software development.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -624,7 +648,18 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Daniel Thuo" class="profile-img">
+                <!-- REPLACE THIS IMAGE URL WITH YOUR PROFILE PHOTO -->
+                <img src="pas.png" alt="Daniel Thuo" class="profile-img" id="profile-photo">
+                <div class="instructions">
+                    <h3>PROFESSIONAL TRAINING:</h3>
+                    <ol>
+                        <li>Children’s Ministry Training</li>
+                        <li>Church Leadership and Management</li>
+                        <li>Strategic Planning & Organizational Leadership</li>
+                        <li>Care After Trauma</li>
+                        <li>Online Child Sexual Exploitation and Abuse (OCSEA)</li>
+                    </ol>
+                </div>
             </div>
         </div>
     </section>
@@ -657,7 +692,7 @@
                         <i class="fas fa-hands-helping"></i>
                     </div>
                     <h3>Leadership & Ministry</h3>
-                    <p>Ordained minister with experience in project management, mediation, and community development</p>
+                    <p>Ordained Minister with experience in project management, mediation, and community development. Graduate of Bachelor of Arts in Christian Ministry Leadership</p>
                 </div>
             </div>
         </div>
@@ -669,7 +704,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm an experienced Accountant, Mediator, and Ordained Minister (studying for a bachelor's degree in Christian ministry leadership) with over 10 years of leadership and financial management in community development and project management.</p>
+                    <p>I'm an experienced Accountant, Mediator, and Ordained Minister holding a degree in Christian ministry leadership with over 10 years of leadership and financial management in community development and project management.</p>
                     <p>I excel in stewardship of donor funds/resources, managing large multi-year budgets, and collaborating and leading at all levels. As a servant leader, I have led teams with a focus on ethical leadership and practically applying Christian values to our actions.</p>
                     <p>I'm currently expanding my technical skills as a Full-Stack Developer, combining my financial expertise with software development to create impactful solutions.</p>
                 </div>
@@ -803,7 +838,7 @@
                             <span class="tech-tag">PHP</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/danielkthuo/photographer-portfolio" class="btn btn-primary">View Project</a>
+                            <a href="https://danielkthuo.github.io/photographer-portfolio/index.html" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -865,23 +900,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
+               
             </div>
         </div>
     </section>
@@ -892,9 +911,9 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Daniel Thuo</h3>
-                    <p>Full-Stack Developer | Accountant | Project Manager</p>
+                    <p>Full-Stack Developer | Accountant | Project Manager |Certified Mediator   </p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/danielkthuo"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/danielthuo"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
@@ -905,8 +924,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                       
                     </ul>
                 </div>
                 <div class="footer-section">
