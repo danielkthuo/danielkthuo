@@ -1,6 +1,6 @@
 # 👋 Hi, I'm **Daniel Thuo**
 
-✨ *Ordained Minister | Full-Stack Developer | Project Management Specialist | Community Development Advocate*  
+✨ *Ordained Minister | Full-Stack Developer | Project Management | Community Development Advocate |Certified Mediator  *  
 
 A **multifaceted professional** blending technical expertise with compassionate leadership to create meaningful impact.  
 I’m passionate about **leveraging technology to solve real-world problems** while empowering communities through **faith-based initiatives and strategic development**.  
