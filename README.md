@@ -11,9 +11,8 @@ I’m passionate about **leveraging technology to solve real-world problems** wh
 
 ### 💻 Technical Expertise  
 - 🖥️ **Frontend Development:** HTML5 | CSS3 | JavaScript (ES6+) | Responsive Design  
-- ⚙️ **Backend Development:** PHP | Python | RESTful APIs | Database Management  
+- ⚙️ **Backend Development:** PHP | Python | Database Management  
 - 📊 **Data Analytics:** Pandas | Matplotlib | Excel Advanced Features | SQL  
-- 🛠️ **Tools & Methodologies:** Git | Agile Development | CI/CD  
 
 ### 📊 Professional Leadership  
 - 📌 **Project Management:** Strategic Planning | Monitoring & Evaluation | Resource Allocation  
