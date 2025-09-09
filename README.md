@@ -1,6 +1,6 @@
 # 👋 Hi, I'm **Daniel Thuo**
 
-✨ *Ordained Minister | Full-Stack Developer | Project Management | Community Development Advocate |Certified Mediator  *  
+✨ *Full-Stack Developer | Financial & Project Management Professional | Certified Mediator | Ministry & Community Leader*  
 
 A **multifaceted professional** blending technical expertise with compassionate leadership to create meaningful impact.  
 I’m passionate about **leveraging technology to solve real-world problems** while empowering communities through **faith-based initiatives and strategic development**.  
@@ -11,9 +11,8 @@ I’m passionate about **leveraging technology to solve real-world problems** wh
 
 ### 💻 Technical Expertise  
 - 🖥️ **Frontend Development:** HTML5 | CSS3 | JavaScript (ES6+) | Responsive Design  
-- ⚙️ **Backend Development:** PHP | Python | RESTful APIs | Database Management  
+- ⚙️ **Backend Development:** PHP | Python | Database Management  
 - 📊 **Data Analytics:** Pandas | Matplotlib | Excel Advanced Features | SQL  
-- 🛠️ **Tools & Methodologies:** Git | Agile Development | CI/CD  
 
 ### 📊 Professional Leadership  
 - 📌 **Project Management:** Strategic Planning | Monitoring & Evaluation | Resource Allocation  
