@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Approach Recommendations</title>
+  <title>Web Development Solutions | Daniel Thuo</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* Global Styles */
@@ -22,13 +22,14 @@
       --dark: #2c3e50;
       --text: #333;
       --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --gradient: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     }
     
     body {
       color: var(--text);
       line-height: 1.6;
       background-color: #f9f9f9;
-      padding: 20px;
+      padding: 0;
     }
     
     .container {
@@ -48,16 +49,29 @@
     
     .btn {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 24px;
       background-color: var(--secondary);
       color: white;
       text-decoration: none;
       border-radius: 5px;
-      transition: background-color 0.3s;
+      transition: all 0.3s;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
     }
     
     .btn:hover {
       background-color: #2980b9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .btn-accent {
+      background-color: var(--accent);
+    }
+    
+    .btn-accent:hover {
+      background-color: #c0392b;
     }
     
     .section-title {
@@ -76,6 +90,72 @@
       width: 80px;
       height: 3px;
       background-color: var(--secondary);
+    }
+    
+    /* Header Section */
+    .header {
+      background: var(--gradient);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 1rem;
+      background-color: #ecf0f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: var(--primary);
+    }
+    
+    .tagline {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+    
+    /* Services Section */
+    .services {
+      padding: 3rem 0;
+      background: white;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .service-card {
+      background: var(--light);
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
     }
     
     /* Comparison Section */
@@ -100,6 +180,11 @@
       padding: 2rem;
       border-radius: 10px;
       background: var(--light);
+      transition: transform 0.3s;
+    }
+    
+    .approach:hover {
+      transform: translateY(-5px);
     }
     
     .approach.recommended {
@@ -162,6 +247,81 @@
       min-width: 50px;
     }
     
+    /* Testimonials */
+    .testimonials {
+      background: var(--light);
+      padding: 3rem 0;
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    
+    .testimonial-author {
+      font-weight: bold;
+      color: var(--primary);
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      background: var(--gradient);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    
+    .cta-section h2 {
+      color: white;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+    
+    .social-links a:hover {
+      color: var(--secondary);
+    }
+    
     /* Responsive Design */
     @media (max-width: 768px) {
       .approaches {
@@ -171,15 +331,91 @@
       .approach {
         min-width: 100%;
       }
+      
+      .implementation-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="profile-img">
+        <i class="fas fa-laptop-code"></i>
+      </div>
+      <h1>Daniel Thuo Web Development</h1>
+      <p class="tagline">Custom Web Solutions for Businesses of All Sizes</p>
+      <p>Combining technical expertise with strategic vision to create websites that drive results</p>
+    </div>
+  </header>
+
   <main class="container">
+    <!-- Services Section -->
+    <section class="services">
+      <h2 class="section-title">My Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Custom Web Development</h3>
+          <p>Tailored websites built to your exact specifications and business needs</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Responsive Design</h3>
+          <p>Websites that look great and function perfectly on all devices</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Business Optimization</h3>
+          <p>Web solutions that streamline operations and improve efficiency</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Database Integration</h3>
+          <p>Custom database solutions for dynamic content and functionality</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Database Design & Programming with SQL</h3>
+          <p>Learn relational databases, SQL programming, and database design</p>
+        </div>
+        <div class="service-card">
+  <div class="service-icon">
+    <i class="fas fa-code"></i>
+  </div>
+  <h3>Front-End Development</h3>
+  <p>Learn HTML, CSS, JavaScript, and build responsive, interactive websites</p>
+</div>
+
+      </div>
+    </section>
+
     <!-- Comparison Section -->
     <section class="comparison">
       <h2 class="section-title">Best Approach For Your Business Website</h2>
-      <p>Based on your business needs, here's our recommendation for implementing your website:</p>
+      <p>Every business is unique, and your website should reflect that. Based on your specific needs, here's my professional recommendation:</p>
       
       <div class="approaches">
         <div class="approach">
@@ -187,7 +423,7 @@
             <i class="fas fa-file-code"></i>
           </div>
           <h3>Static Website</h3>
-          <p><strong>Ideal for:</strong> Small businesses with infrequent content changes</p>
+          <p><strong>Ideal for:</strong>Businesses whose content rarely changes and mainly provides information</p>
           <ul>
             <li>No database required</li>
             <li>Faster loading times</li>
@@ -203,14 +439,14 @@
             <i class="fas fa-balance-scale"></i>
           </div>
           <h3>Hybrid Approach</h3>
-          <p><strong>Recommended for:</strong> Most businesses with occasional updates</p>
+          <p><strong>Recommended for:</strong> Businesses with mostly static content but occasional updates.</p>
           <ul>
             <li>Static pages for most content</li>
             <li>Simple database for dynamic elements</li>
             <li>Easy to update key content</li>
             <li>Balanced cost and functionality</li>
             <li>Minimal technical requirements</li>
-            <li>Ideal for blogs, product catalogs</li>
+            <li>Ideal for blogs, product catalogs,restaurants or cafe,consultancy firms</li>
           </ul>
         </div>
         
@@ -226,13 +462,13 @@
             <li>Higher hosting costs</li>
             <li>More maintenance required</li>
             <li>Steeper learning curve</li>
-            <li>Best for e-commerce, news sites</li>
+            <li>Best for e-commerce, Institute/School Management System,Corporate Websites,Interactive Dashboards</li>
           </ul>
         </div>
       </div>
       
       <div style="text-align: center; margin-top: 2rem;">
-        <p><strong>For most businesses, we recommend the Hybrid Approach</strong> - it provides the best balance of maintainability and cost-effectiveness.</p>
+        <p><strong>For most businesses, I recommend the Hybrid Approach</strong> - it provides the best balance of maintainability and cost-effectiveness while allowing for future growth.</p>
         <a href="#implementation" class="btn">See Implementation Details</a>
       </div>
     </section>
@@ -247,14 +483,9 @@
           </div>
           <div class="implementation-details">
             <h3>Database Needs</h3>
-            <p>For the hybrid approach, we recommend simple database tables based on your business needs:</p>
-            <ul>
-              <li><strong>Products/Services Table:</strong> For your offerings</li>
-              <li><strong>Blog/News Table:</strong> For articles and updates</li>
-              <li><strong>Testimonials Table:</strong> For customer feedback</li>
-              <li><strong>Events Table:</strong> For upcoming activities</li>
-            </ul>
-            <p>All other content (About, Contact, Policies) can remain as static HTML since it changes infrequently.</p>
+            <p>For the hybrid approach, I implement simple database tables based on your business needs</p>
+            
+            
           </div>
         </div>
         <div class="implementation-item">
@@ -263,13 +494,14 @@
           </div>
           <div class="implementation-details">
             <h3>Technology Stack</h3>
-            <p>We recommend:</p>
+            <p>Based on your specific requirements, I recommend:</p>
             <ul>
-              <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
-              <li><strong>Backend:</strong> PHP, Python, or Node.js for minimal dynamic functionality</li>
-              <li><strong>Database:</strong> MySQL, PostgreSQL, or SQLite for simplicity</li>
-              <li><strong>Hosting:</strong> Shared hosting with database support</li>
-              <li><strong>Optional CMS:</strong> WordPress or custom admin panel</li>
+              <li><strong>Frontend:</strong> HTML, CSS, JavaScript with responsive design principles</li>
+              <li><strong>Backend:</strong> PHP for minimal dynamic functionality</li>
+              <li><strong>Database:</strong> MySQL for simplicity and reliability</li>
+              <li><strong>Hosting:</strong> Shared hosting with database support or cloud solutions</li>
+              <li><strong>Optional CMS:</strong> Custom admin panel tailored to your specific needs</li>
+              
             </ul>
           </div>
         </div>
@@ -279,19 +511,68 @@
           </div>
           <div class="implementation-details">
             <h3>Content Management</h3>
-            <p>For the dynamic parts of your website:</p>
+            <p>For the dynamic parts of your website, I provide:</p>
             <ul>
-              <li>Create a simple admin interface for adding products/blog posts</li>
-              <li>Build forms for customer testimonials and inquiries</li>
-              <li>Keep it simple - no need for a full CMS unless necessary</li>
-              <li>Consider using a static site generator for better performance</li>
+              <li>A simple, intuitive admin interface for adding products/blog posts</li>
+              <li>User-friendly forms for customer testimonials and inquiries</li>
+              <li>Training and documentation for your team</li>
+              <li>Ongoing support options for content updates</li>
+              <li>Search engine optimization best practices</li>
             </ul>
-            <p>For static content, provide clear documentation for your developer to make future changes.</p>
+            <p>For static content, I provide clear documentation for future reference and maintenance.</p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Testimonials Section ->
+    <section class="testimonials">
+      <h2 class="section-title">Client Testimonials</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Daniel transformed our small business website into a powerful tool that now drives 40% more inquiries. His hybrid approach was perfect for our needs."</p>
+          <p class="testimonial-author">- Sarah Johnson, Boutique Owner</p>
+        </div>
+        
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The custom admin panel Daniel created allows our non-technical staff to update products easily. It's been a game-changer for our e-commerce operations."</p>
+          <p class="testimonial-author">- Michael Chen, Retail Manager</p>
+        </div>
+        
+        <div class="testimonial-card">
+          <p class="testimonial-text">"We needed a website that could grow with our ministry. Daniel's solution was both affordable and scalable, exactly what we needed."</p>
+          <p class="testimonial-author">- Pastor James Williams, Faith Community Church</p>
+        </div>
+      </div>
+    </section--->
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2>Ready to Transform Your Online Presence?</h2>
+      <p>Let's discuss how I can create the perfect web solution for your business needs.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/254734080808" class="btn">Get a Free Consultation</a>
+        <a href="https://danielkthuo.github.io/danielkthuo/" class="btn btn-accent">View My Portfolio</a>
+      </div>
+    </section>
   </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <h3>Daniel Thuo Web Development</h3>
+      <p>Empowering the future,Transforming Global ICT and Digital Solutions</p>
+      
+      <div class="social-links">
+        <a href="https://github.com/danielkthuo" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/danielthuo/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/254734080808" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      
+      <p>Email: your.danyelthuo@gmail.com | Phone: +254 734080808</p>
+      <p>&copy; 2025 Daniel Thuo. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
     // Simple smooth scrolling for the implementation link
