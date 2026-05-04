@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Daniel Thuo: Finance, ICT & Leadership Consultant. Bridging financial systems, digital transformation, and leadership development for NGOs, SMEs, and institutions.">
-  <meta name="theme-color" content="#0a1628">
-  <title>Daniel Thuo | Finance • ICT • Leadership Consultant</title>
-  <!-- Google Fonts + Baseline -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Instrument+Serif:opsz@14..32&display=swap" rel="stylesheet">
-  <!-- Font Awesome 6 (free icons) -->
+  <meta name="description" content="Daniel Thuo — Finance, ICT & Leadership Consultant. Bridging financial systems, digital transformation, and strategic leadership for NGOs, SMEs, and institutions.">
+  <meta name="theme-color" content="#0B1120">
+  <title>Daniel Thuo | Finance • ICT • Leadership</title>
+  <!-- Google Fonts + modern icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -18,38 +17,38 @@
     }
 
     :root {
-      --deep-ink: #0A0F1C;
-      --navy-soft: #111827;
-      --slate: #1F2937;
-      --gold-core: #D4AF37;
-      --gold-muted: #E5C46B;
-      --gold-subtle: rgba(212, 175, 55, 0.12);
-      --cream-pure: #FDFCF8;
-      --gray-50: #F9FAFB;
-      --gray-200: #E5E7EB;
-      --gray-600: #4B5563;
-      --gray-700: #374151;
+      --bg-dark: #0B1120;
+      --bg-deep: #0F172A;
+      --bg-card: #1E293B;
+      --gold-primary: #EAB308;
+      --gold-glow: #FACC15;
+      --gold-soft: rgba(234, 179, 8, 0.12);
+      --text-light: #F1F5F9;
+      --text-muted: #94A3B8;
+      --text-dark: #0F172A;
       --white: #FFFFFF;
-      --black-fade: rgba(0, 0, 0, 0.85);
-      --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-      --shadow-md: 0 20px 25px -12px rgba(0, 0, 0, 0.08);
-      --border-light: 1px solid rgba(0, 0, 0, 0.05);
-      --transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --border-light: rgba(255, 255, 255, 0.06);
+      --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      --shadow-gold: 0 20px 35px -10px rgba(234, 179, 8, 0.15);
+      --transition-smooth: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--cream-pure);
-      color: var(--slate);
+      background: var(--bg-dark);
+      color: var(--text-light);
       line-height: 1.5;
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
 
-    h1, h2, h3, h4, .serif {
-      font-family: 'Instrument Serif', serif;
-      font-weight: 500;
-      letter-spacing: -0.01em;
+    .glow-text {
+      background: linear-gradient(135deg, #FDE047 0%, #EAB308 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .container {
@@ -58,391 +57,394 @@
       padding: 0 32px;
     }
 
-    /* glass-nav */
+    /* modern navbar glassmorphic */
     .navbar {
       position: fixed;
       top: 0;
       left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      width: 100%;
+      background: rgba(11, 17, 32, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(234, 179, 8, 0.15);
       z-index: 1000;
-      transition: var(--transition);
-      padding: 0 32px;
+      transition: var(--transition-smooth);
     }
+
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 80px;
       max-width: 1280px;
       margin: 0 auto;
+      padding: 0 32px;
     }
+
     .logo {
-      font-family: 'Instrument Serif', serif;
-      font-size: 1.8rem;
-      font-weight: 500;
-      background: linear-gradient(135deg, var(--deep-ink) 30%, var(--gold-core) 80%);
+      font-family: 'Space Grotesk', monospace;
+      font-size: 1.9rem;
+      font-weight: 700;
+      background: linear-gradient(125deg, #FFFFFF 20%, #EAB308 80%);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       letter-spacing: -0.02em;
     }
+
     .logo span {
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: var(--gray-600);
+      font-size: 0.75rem;
+      font-weight: 500;
       background: none;
-      -webkit-background-clip: unset;
-      background-clip: unset;
-      margin-left: 6px;
+      color: var(--text-muted);
+      letter-spacing: 0.3px;
     }
+
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
       align-items: center;
     }
+
     .nav-links a {
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 500;
-      color: var(--gray-700);
-      transition: var(--transition);
-    }
-    .nav-links a:hover { color: var(--gold-core); }
-    .btn-outline-gold {
-      border: 1px solid var(--gold-core);
-      padding: 8px 20px;
-      border-radius: 40px;
-      background: transparent;
-      color: var(--deep-ink);
-      font-weight: 600;
-    }
-    .btn-outline-gold:hover {
-      background: var(--gold-core);
-      color: white;
-      border-color: var(--gold-core);
-    }
-    @media (max-width: 800px) {
-      .nav-links { display: none; }
-      .navbar { padding: 0 20px; }
+      color: var(--text-muted);
+      transition: 0.2s ease;
     }
 
-    /* HERO MODERN */
-    .hero-modern {
+    .nav-links a:hover {
+      color: var(--gold-primary);
+    }
+
+    .btn-gold-outline {
+      border: 1.5px solid var(--gold-primary);
+      padding: 8px 22px;
+      border-radius: 40px;
+      background: transparent;
+      color: var(--gold-primary);
+      font-weight: 600;
+      transition: 0.25s;
+    }
+
+    .btn-gold-outline:hover {
+      background: var(--gold-primary);
+      color: var(--bg-dark);
+      box-shadow: 0 0 12px rgba(234, 179, 8, 0.4);
+    }
+
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+      .nav-inner {
+        padding: 0 20px;
+      }
+    }
+
+    /* Hero section with dynamic grid */
+    .hero {
       min-height: 100vh;
-      background: var(--cream-pure);
-      position: relative;
       display: flex;
       align-items: center;
-      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+      padding: 140px 0 80px;
+      background: radial-gradient(ellipse 80% 50% at 20% 40%, rgba(234, 179, 8, 0.08), transparent);
     }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 0.9fr;
-      gap: 4rem;
+      gap: 3rem;
       align-items: center;
     }
-    .hero-badge {
+
+    .badge-modern {
       display: inline-flex;
-      background: var(--gold-subtle);
-      padding: 6px 14px;
-      border-radius: 40px;
-      font-size: 0.75rem;
+      background: var(--gold-soft);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.7rem;
       font-weight: 600;
-      color: #B88B1F;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.3px;
+      color: var(--gold-glow);
+      margin-bottom: 1.8rem;
+      letter-spacing: 0.4px;
+      backdrop-filter: blur(4px);
     }
+
     .hero-title {
-      font-size: clamp(3rem, 6vw, 4.8rem);
+      font-size: clamp(2.8rem, 6vw, 5rem);
       line-height: 1.1;
-      color: var(--deep-ink);
+      font-weight: 800;
+      letter-spacing: -0.02em;
       margin-bottom: 1.2rem;
     }
-    .hero-title .accent {
-      color: var(--gold-core);
-      border-bottom: 2px solid var(--gold-core);
-      display: inline-block;
-    }
+
     .hero-desc {
       font-size: 1.1rem;
-      color: var(--gray-600);
+      color: var(--text-muted);
       max-width: 90%;
-      margin: 1.5rem 0 2rem;
+      margin: 1.2rem 0 2rem;
       line-height: 1.6;
     }
-    .pill-group {
+
+    .pill-collection {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin: 1.8rem 0 2.2rem;
+      gap: 12px;
+      margin: 1.6rem 0 2rem;
     }
-    .pill {
-      background: white;
-      border: 1px solid var(--gray-200);
-      padding: 6px 18px;
+
+    .tech-pill {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(234, 179, 8, 0.2);
       border-radius: 40px;
+      padding: 6px 18px;
       font-size: 0.8rem;
       font-weight: 500;
-      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(4px);
     }
-    .btn-group {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .btn-primary {
-      background: var(--deep-ink);
-      color: white;
+
+    .btn-primary-gold {
+      background: var(--gold-primary);
+      color: var(--bg-dark);
       padding: 12px 32px;
       border-radius: 40px;
       text-decoration: none;
-      font-weight: 600;
-      transition: var(--transition);
+      font-weight: 700;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      transition: 0.25s;
+      box-shadow: 0 8px 20px rgba(234, 179, 8, 0.3);
     }
-    .btn-primary:hover { background: var(--gold-core); color: var(--deep-ink); transform: translateY(-2px); }
-    .btn-secondary {
+
+    .btn-primary-gold:hover {
+      transform: translateY(-3px);
+      background: #FACC15;
+      box-shadow: 0 15px 30px rgba(234, 179, 8, 0.4);
+    }
+
+    .btn-outline-light {
       background: transparent;
-      border: 1px solid var(--gray-300);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       padding: 12px 32px;
       border-radius: 40px;
       font-weight: 600;
-      transition: var(--transition);
       text-decoration: none;
-      color: var(--gray-700);
+      color: var(--text-light);
+      transition: 0.25s;
     }
-    .hero-stats-card {
-      background: white;
-      border-radius: 32px;
+
+    .btn-outline-light:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+    }
+
+    /* Premium card stats */
+    .stats-premium {
+      background: var(--bg-card);
+      border-radius: 2rem;
       padding: 2rem;
-      box-shadow: var(--shadow-md);
-      border: var(--border-light);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(234, 179, 8, 0.15);
+      box-shadow: var(--shadow-xl);
     }
-    .stat-grid {
+
+    .stat-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
+      gap: 1.8rem;
       margin-bottom: 1.8rem;
     }
-    .stat-value {
-      font-size: 2.2rem;
-      font-weight: 700;
-      font-family: 'Instrument Serif', serif;
-      color: var(--gold-core);
-      line-height: 1.2;
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--gold-primary);
+      font-family: 'Space Grotesk', monospace;
     }
-    .cert-row {
+
+    .cert-item {
       display: flex;
       gap: 12px;
       align-items: center;
-      padding: 10px 0;
-      border-top: 1px solid rgba(0,0,0,0.03);
-    }
-    .cert-icon {
-      width: 36px;
-      height: 36px;
-      background: var(--gold-subtle);
-      border-radius: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: #b8860b;
+      padding: 12px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* section style */
+    /* section universal */
     section {
       padding: 100px 0;
     }
-    .section-tag {
+
+    .section-tagline {
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       font-size: 0.7rem;
       font-weight: 600;
-      color: var(--gold-core);
+      color: var(--gold-primary);
       margin-bottom: 1rem;
       display: inline-block;
     }
+
     .section-title {
       font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
       margin-bottom: 1rem;
-      color: var(--deep-ink);
     }
-    .section-sub {
-      color: var(--gray-600);
+
+    .section-subhead {
+      color: var(--text-muted);
       max-width: 680px;
       margin-bottom: 3rem;
+      font-size: 1.05rem;
     }
 
-    /* value prop cards */
-    .cards-three {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .card-elegant {
-      background: white;
+    .card-glass {
+      background: var(--bg-card);
+      border-radius: 1.8rem;
       padding: 2rem;
-      border-radius: 28px;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-      border: 1px solid rgba(0,0,0,0.03);
-    }
-    .card-elegant:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-    .card-icon {
-      font-size: 2.2rem;
-      margin-bottom: 1.2rem;
+      transition: var(--transition-smooth);
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* expertise dark section */
-    .dark-section {
-      background: var(--deep-ink);
-      color: white;
+    .card-glass:hover {
+      transform: translateY(-8px);
+      border-color: rgba(234, 179, 8, 0.4);
+      box-shadow: var(--shadow-gold);
     }
-    .dark-section .section-sub { color: rgba(255,255,255,0.7); }
-    .exp-grid {
+
+    .grid-3 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      margin-top: 2rem;
-    }
-    .exp-pillar {
-      background: rgba(255,255,255,0.04);
-      border-radius: 28px;
-      padding: 2rem;
-      backdrop-filter: blur(2px);
-      transition: var(--transition);
-      border: 1px solid rgba(212,175,55,0.15);
-    }
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1.5rem;
-    }
-    .skill-tag {
-      background: rgba(255,255,255,0.07);
-      border-radius: 40px;
-      padding: 6px 14px;
-      font-size: 0.75rem;
-      font-weight: 400;
     }
 
-    /* services 2+featured */
+    /* expertise dark */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .skill-bubbles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 1.4rem;
+    }
+
+    .skill-badge {
+      background: rgba(234, 179, 8, 0.1);
+      border-radius: 30px;
+      padding: 6px 14px;
+      font-size: 0.7rem;
+      font-weight: 500;
+    }
+
+    /* timeline modern */
+    .timeline-modern {
+      position: relative;
+      padding-left: 1.8rem;
+      border-left: 2px solid var(--gold-primary);
+    }
+
+    .timeline-node {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2.4rem;
+      top: 0.3rem;
+      width: 14px;
+      height: 14px;
+      background: var(--gold-primary);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(234, 179, 8, 0.3);
+    }
+
+    /* services 2-col + featured */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.8rem;
+      gap: 2rem;
     }
-    .service-card {
-      background: white;
-      border-radius: 28px;
-      padding: 2rem;
-      transition: var(--transition);
-    }
+
     .featured-service {
       grid-column: span 2;
-      background: linear-gradient(105deg, #FEFAF0 0%, #FFFFFF 100%);
-      border-left: 6px solid var(--gold-core);
-    }
-    .featured-inner {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 2rem;
+      background: linear-gradient(125deg, #1E293B 0%, #0F172A 100%);
+      border-left: 5px solid var(--gold-primary);
     }
 
-    /* timeline */
-    .timeline-modern {
-      position: relative;
-      padding-left: 1.5rem;
-      border-left: 2px solid var(--gold-core);
-    }
-    .timeline-item {
-      margin-bottom: 3rem;
-      position: relative;
-    }
-    .timeline-dot {
-      position: absolute;
-      left: -2.2rem;
-      top: 0.5rem;
-      width: 14px;
-      height: 14px;
-      background: var(--gold-core);
-      border-radius: 50%;
-      box-shadow: 0 0 0 4px rgba(212,175,55,0.2);
-    }
-
-    /* projects */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-    .project-card {
-      background: white;
-      border-radius: 28px;
-      overflow: hidden;
-      transition: var(--transition);
-    }
-
-    /* contact */
-    .contact-grid {
+    /* contact modern */
+    .contact-wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
+      background: var(--bg-card);
+      border-radius: 2rem;
+      padding: 2.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
-    .contact-info-card {
-      background: white;
-      border-radius: 32px;
-      padding: 2rem;
-    }
-    .contact-field {
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: 20px;
-      padding: 0.9rem 1.3rem;
+
+    .input-group {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1.2rem;
+      padding: 0.9rem 1.2rem;
       width: 100%;
+      color: white;
       font-family: 'Inter', sans-serif;
     }
 
     footer {
-      background: var(--deep-ink);
-      color: rgba(255,255,255,0.6);
-      padding: 2rem 0;
+      background: #030712;
+      padding: 2.5rem 0;
       text-align: center;
+      border-top: 1px solid rgba(234, 179, 8, 0.1);
     }
 
     @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .services-grid { grid-template-columns: 1fr; }
-      .featured-service { grid-column: span 1; }
-      .featured-inner { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .container { padding: 0 24px; }
-      section { padding: 70px 0; }
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-service {
+        grid-column: span 1;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 0 24px;
+      }
     }
-    .fade-up {
+
+    /* scroll animation */
+    .fade-stagger {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
-    .fade-up.visible {
+
+    .fade-stagger.visible {
       opacity: 1;
       transform: translateY(0);
-    }
-    .profile-img {
-      width: 100%;
-      border-radius: 28px;
-      object-fit: cover;
-      max-height: 420px;
-      box-shadow: var(--shadow-md);
-    }
-    img {
-      display: block;
     }
   </style>
 </head>
@@ -450,179 +452,169 @@
 
 <nav class="navbar">
   <div class="nav-inner">
-    <div class="logo">Daniel Thuo <span>| Consultant</span></div>
+    <div class="logo">Daniel Thuo <span>// CONSULTANT</span></div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
       <a href="#services">Services</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-      <a href="#contact" class="btn-outline-gold">Connect</a>
+      <a href="#contact" class="btn-gold-outline">Connect</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO SECTION (modern) -->
-<section class="hero-modern" id="home">
+<!-- Hero Section -->
+<section class="hero" id="home">
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="hero-badge"><i class="fas fa-map-marker-alt" style="margin-right: 6px;"></i> Nairobi, Kenya · Global Reach</div>
-        <h1 class="hero-title">Finance meets <span class="accent">systems</span> & leadership</h1>
-        <p class="hero-desc">Daniel Thuo blends financial rigor, ICT architecture, and leadership development to transform organizations. 10+ years helping NGOs, SMEs, and institutions become resilient and data-driven.</p>
-        <div class="pill-group">
-          <span class="pill"><i class="fas fa-chart-line"></i> Financial Systems</span>
-          <span class="pill"><i class="fas fa-laptop-code"></i> ICT Solutions</span>
-          <span class="pill"><i class="fas fa-users"></i> Leadership Trainer</span>
-          <span class="pill"><i class="fas fa-handshake"></i> Certified Mediator</span>
+        <div class="badge-modern"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Nairobi · Global availability</div>
+        <h1 class="hero-title">Finance meets <span class="glow-text">systems & leadership</span></h1>
+        <p class="hero-desc">Daniel Thuo integrates financial strategy, ICT architecture, and leadership development — 10+ years transforming NGOs, SMEs, and institutions with accountability and digital edge.</p>
+        <div class="pill-collection">
+          <span class="tech-pill"><i class="fas fa-chart-line"></i> Financial Systems</span>
+          <span class="tech-pill"><i class="fas fa-code"></i> ICT Solutions</span>
+          <span class="tech-pill"><i class="fas fa-users"></i> Leadership Trainer</span>
+          <span class="tech-pill"><i class="fas fa-handshake"></i> Certified Mediator</span>
         </div>
-        <div class="btn-group">
-          <a href="#services" class="btn-primary">Explore services <i class="fas fa-arrow-right"></i></a>
-          <a href="#contact" class="btn-secondary">Schedule a call</a>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="#services" class="btn-primary-gold">Explore services <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="btn-outline-light">Book a call</a>
         </div>
       </div>
-      <div class="hero-stats-card">
-        <div class="stat-grid">
-          <div><div class="stat-value">10+</div><div style="font-size:0.8rem;">Years experience</div></div>
-          <div><div class="stat-value">45M+</div><div style="font-size:0.8rem;">KES budget oversight</div></div>
-          <div><div class="stat-value">1.2K+</div><div style="font-size:0.8rem;">Lives impacted</div></div>
-          <div><div class="stat-value">70%</div><div style="font-size:0.8rem;">Families empowered</div></div>
+      <div class="stats-premium">
+        <div class="stat-row">
+          <div><span class="stat-number">10+</span><div style="color:#94A3B8; font-size:0.8rem;">Years experience</div></div>
+          <div><span class="stat-number">45M+</span><div style="color:#94A3B8;">KES budget oversight</div></div>
+          <div><span class="stat-number">1.2K+</span><div style="color:#94A3B8;">Lives impacted</div></div>
+          <div><span class="stat-number">70%</span><div style="color:#94A3B8;">Families empowered</div></div>
         </div>
-        <div class="cert-row"><div class="cert-icon"><i class="fas fa-graduation-cap"></i></div><div><strong>CPA-K Finalist</strong><br>ICPAK</div></div>
-        <div class="cert-row"><div class="cert-icon"><i class="fas fa-scale-balanced"></i></div><div><strong>Certified Mediator</strong><br>Conflict resolution & negotiation</div></div>
-        <div class="cert-row"><div class="cert-icon"><i class="fas fa-church"></i></div><div><strong>BA Christian Ministry Leadership</strong><br>Governance, ethics & community</div></div>
-        <div class="cert-row"><div class="cert-icon"><i class="fas fa-code"></i></div><div><strong>Full-stack dev (in-progress)</strong><br>PHP, Python, JS, Power BI</div></div>
+        <div class="cert-item"><i class="fas fa-graduation-cap" style="color:#EAB308; width: 32px;"></i><div><strong>CPA-K Finalist</strong><br>ICPAK</div></div>
+        <div class="cert-item"><i class="fas fa-scale-balanced" style="color:#EAB308; width: 32px;"></i><div><strong>Certified Mediator</strong><br>Conflict resolution & negotiation</div></div>
+        <div class="cert-item"><i class="fas fa-church" style="color:#EAB308; width: 32px;"></i><div><strong>BA Christian Ministry Leadership</strong><br>Governance, ethics & community</div></div>
+        <div class="cert-item"><i class="fas fa-laptop-code" style="color:#EAB308; width: 32px;"></i><div><strong>Full-stack dev (In progress)</strong><br>PHP, Python, Power BI, MySQL</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VALUE / ABOUT SECTION (triple expertise) -->
+<!-- About Section: Triple expertise -->
 <section id="about">
   <div class="container">
-    <span class="section-tag">Why partner with me</span>
-    <h2 class="section-title">A rare triple-expertise architect</h2>
-    <p class="section-sub">Most consultants offer one discipline. I bridge finance, technology, and human systems — solving complex challenges end-to-end.</p>
-    <div class="cards-three">
-      <div class="card-elegant fade-up"><div class="card-icon"><i class="fas fa-chart-pie"></i></div><h3>Financial Acumen</h3><p>CPA-K finalist with multi-million donor grant management, audit readiness, and robust internal controls for transparency.</p></div>
-      <div class="card-elegant fade-up"><div class="card-icon"><i class="fas fa-microchip"></i></div><h3>ICT Systems Design</h3><p>Full-stack skills (PHP, Python, MySQL, Power BI) to digitize operations, MIS dashboards, and data-led decision tools.</p></div>
-      <div class="card-elegant fade-up"><div class="card-icon"><i class="fas fa-brain"></i></div><h3>Leadership & Systems Thinking</h3><p>Ordained minister & certified mediator — governance frameworks, mentoring, and capacity building that transforms institutions.</p></div>
+    <span class="section-tagline">Why partner with me</span>
+    <h2 class="section-title">Rare fusion of finance, tech & human systems</h2>
+    <p class="section-subhead">Most consultants master one domain. I bridge three — solving complex challenges with holistic architecture.</p>
+    <div class="grid-3">
+      <div class="card-glass fade-stagger"><i class="fas fa-chart-pie" style="font-size: 2.2rem; color: #EAB308;"></i><h3 style="margin: 1rem 0 0.6rem;">Financial Acumen</h3><p>CPA-K finalist, donor grant management, audit readiness, internal controls & transparent fiscal systems.</p></div>
+      <div class="card-glass fade-stagger"><i class="fas fa-microchip" style="font-size: 2.2rem; color: #EAB308;"></i><h3 style="margin: 1rem 0 0.6rem;">ICT Systems Design</h3><p>Full-stack development (PHP, Python, JS, Power BI) to build MIS, dashboards, and digital transformation roadmaps.</p></div>
+      <div class="card-glass fade-stagger"><i class="fas fa-brain" style="font-size: 2.2rem; color: #EAB308;"></i><h3 style="margin: 1rem 0 0.6rem;">Leadership & Systems Thinking</h3><p>Certified mediator, ordained minister, capacity building specialist — governance frameworks that transform institutions.</p></div>
     </div>
   </div>
 </section>
 
-<!-- EXPERTISE dark -->
-<section class="dark-section" id="expertise">
+<!-- Expertise Section (dark) -->
+<section id="expertise" style="background: #0A0F1C;">
   <div class="container">
-    <span class="section-tag">Core domains</span>
-    <h2 class="section-title" style="color:white;">Deep cross-functional mastery</h2>
-    <p class="section-sub">Financial controls · Digital systems · Human capital strategy</p>
-    <div class="exp-grid">
-      <div class="exp-pillar"><i class="fas fa-file-invoice-dollar" style="font-size:2rem; color:var(--gold-core);"></i><h3 style="margin: 1rem 0 0.5rem;">Finance & Accounting</h3><p>Financial reporting, grant compliance, budgeting, QuickBooks, ERP, audit readiness.</p><div class="skill-list"><span class="skill-tag">Donor funds</span><span class="skill-tag">Risk analysis</span><span class="skill-tag">Internal controls</span><span class="skill-tag">Forecasting</span></div></div>
-      <div class="exp-pillar"><i class="fas fa-database" style="font-size:2rem; color:var(--gold-core);"></i><h3 style="margin: 1rem 0 0.5rem;">ICT & Systems</h3><p>Custom web apps, MIS, Power BI analytics, database design, digital transformation.</p><div class="skill-list"><span class="skill-tag">PHP/Python</span><span class="skill-tag">MySQL</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Data Viz</span></div></div>
-      <div class="exp-pillar"><i class="fas fa-chalkboard-user" style="font-size:2rem; color:var(--gold-core);"></i><h3 style="margin: 1rem 0 0.5rem;">Leadership & Training</h3><p>Mediation, capacity building, strategic governance, program management, mentorship.</p><div class="skill-list"><span class="skill-tag">Project Mgt</span><span class="skill-tag">Conflict resolution</span><span class="skill-tag">Safeguarding</span><span class="skill-tag">Team leadership</span></div></div>
+    <span class="section-tagline">Core domains</span>
+    <h2 class="section-title">Cross-functional mastery</h2>
+    <p class="section-subhead">Financial rigor · Digital innovation · Strategic leadership</p>
+    <div class="expertise-grid">
+      <div class="card-glass"><i class="fas fa-file-invoice-dollar" style="font-size: 1.8rem; color:#EAB308;"></i><h3 style="margin:0.8rem 0 0.5rem;">Finance & Accounting</h3><p>Financial reporting, grant compliance, QuickBooks, ERP, forecasting, risk analysis.</p><div class="skill-bubbles"><span class="skill-badge">Donor funds</span><span class="skill-badge">Audit prep</span><span class="skill-badge">Internal controls</span></div></div>
+      <div class="card-glass"><i class="fas fa-database" style="font-size: 1.8rem; color:#EAB308;"></i><h3>ICT & Digital Systems</h3><p>Custom management systems, Power BI analytics, MIS architecture, web apps.</p><div class="skill-bubbles"><span class="skill-badge">PHP/Python</span><span class="skill-badge">MySQL</span><span class="skill-badge">Data Viz</span><span class="skill-badge">JS</span></div></div>
+      <div class="card-glass"><i class="fas fa-chalkboard-user" style="font-size: 1.8rem; color:#EAB308;"></i><h3>Leadership & Training</h3><p>Mediation, strategic governance, program management, team mentorship, safeguarding.</p><div class="skill-bubbles"><span class="skill-badge">Project Mgt</span><span class="skill-badge">Conflict resolution</span><span class="skill-badge">Capacity building</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- Services featured -->
 <section id="services">
   <div class="container">
-    <span class="section-tag">What I offer</span>
-    <h2 class="section-title">Consulting, training & mentorship</h2>
-    <p class="section-sub">Tailored engagements for NGOs, SMEs, churches, schools, and government agencies.</p>
+    <span class="section-tagline">What I deliver</span>
+    <h2 class="section-title">Consulting, training & digital solutions</h2>
+    <p class="section-subhead">Tailored for NGOs, SMEs, churches, schools, and development partners.</p>
     <div class="services-grid">
-      <div class="service-card fade-up"><i class="fas fa-calculator" style="font-size:2rem; color: var(--gold-core);"></i><h3>Financial Systems Consulting</h3><p>Policy design, grant management, audit prep, QuickBooks/ERP, and budget dashboards.</p><ul style="margin-top:1rem; list-style:none;"><li>✓ Donor compliance</li><li>✓ Internal controls</li></ul></div>
-      <div class="service-card fade-up"><i class="fas fa-laptop-code"></i><h3>ICT & Digital Transformation</h3><p>Custom web applications, MIS, Power BI analytics, database architecture for operational clarity.</p><ul style="margin-top:1rem;"><li>✓ Management Info Systems</li><li>✓ Data dashboards</li></ul></div>
-      <div class="service-card fade-up"><i class="fas fa-chalkboard"></i><h3>Leadership Training</h3><p>Workshops on governance, accountability, safeguarding, entrepreneurship, and coaching.</p><ul><li>✓ Board & staff training</li><li>✓ Mediation skills</li></ul></div>
-      <div class="service-card fade-up"><i class="fas fa-hands-helping"></i><h3>Mentorship & Coaching</h3><p>Career mentorship for young professionals, financial literacy, and values-based leadership.</p></div>
-      <div class="service-card featured-service fade-up">
-        <div class="featured-inner">
-          <div><h3 style="font-size: 1.8rem;">Organizational Systems Design</h3><p>Unified finance + ICT + governance blueprint for NGOs, churches, schools, and SMEs ready to scale.</p></div>
-          <div><div class="skill-tag" style="background:#eee;">✅ Grant mgmt & M&E</div><div class="skill-tag" style="background:#eee;">✅ Inventory & financial controls</div><div class="skill-tag" style="background:#eee;">✅ Church governance systems</div><div class="skill-tag" style="background:#eee;">✅ College management systems</div></div>
-        </div>
-      </div>
+      <div class="card-glass fade-stagger"><i class="fas fa-calculator" style="font-size:1.8rem; color:#EAB308;"></i><h3>Financial Systems Consulting</h3><p>Policy design, donor compliance, budget dashboards, ERP integration, audit readiness.</p><div class="skill-bubbles"><span class="skill-badge">Donor compliance</span><span class="skill-badge">Internal controls</span></div></div>
+      <div class="card-glass fade-stagger"><i class="fas fa-laptop-code" style="font-size:1.8rem; color:#EAB308;"></i><h3>ICT & Digital Transformation</h3><p>Custom web applications, MIS, Power BI analytics, database architecture.</p><div class="skill-bubbles"><span class="skill-badge">Management systems</span><span class="skill-badge">Data dashboards</span></div></div>
+      <div class="card-glass fade-stagger"><i class="fas fa-chalkboard" style="font-size:1.8rem; color:#EAB308;"></i><h3>Leadership Training</h3><p>Workshops on governance, accountability, entrepreneurship & mediation skills.</p></div>
+      <div class="card-glass fade-stagger"><i class="fas fa-hands-helping" style="font-size:1.8rem; color:#EAB308;"></i><h3>Mentorship & Coaching</h3><p>Career mentorship for young professionals, financial literacy, values-based leadership.</p></div>
+      <div class="card-glass featured-service fade-stagger"><div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between;"><div><h3 style="font-size:1.5rem;">Organizational Systems Design</h3><p style="margin-top: 0.4rem;">Unified finance + ICT + governance blueprint for organizations ready to scale.</p></div><div><span class="skill-badge" style="background:#EAB30820;">Grant mgmt & M&E</span> <span class="skill-badge">Inventory controls</span> <span class="skill-badge">College MIS</span> <span class="skill-badge">Church governance</span></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE timeline + sidebar -->
+<!-- Experience -->
 <section id="experience">
   <div class="container">
-    <span class="section-tag">Career journey</span>
     <div style="display: grid; grid-template-columns: 1fr 0.8fr; gap: 3rem;">
-      <div class="timeline-modern">
-        <div class="timeline-item"><div class="timeline-dot"></div><span style="font-size:0.75rem; color:var(--gold-core); font-weight:600;">2021 – 2024</span><h3 style="margin: 0.5rem 0 0.2rem;">Project Coordinator</h3><p style="color:var(--gray-600);">Humanitarian Project, Nairobi — Led child protection, education, and family empowerment programs. Coordinated with government and partners, built strategic partnerships, measurable impact on 1,200+ beneficiaries.</p><div class="skill-list"><span class="skill-tag">Program Mgt</span><span class="skill-tag">Partnerships</span></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><span style="font-size:0.75rem; color:var(--gold-core);">2013 – 2021</span><h3>Project Accountant</h3><p>Multi-donor financial compliance, improved audit ratings, managed multi-million KES grants, trained youth on entrepreneurship & child protection.</p><div class="skill-list"><span class="skill-tag">Grants Mgt</span><span class="skill-tag">Audit readiness</span></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><span style="font-size:0.75rem; color:var(--gold-core);">2009 – 2012</span><h3>Inventory Controller</h3><p>Retail industry — stock accuracy, variance analysis, loss reduction, process optimization.</p></div>
-      </div>
       <div>
-        <div style="background: var(--gray-50); border-radius: 28px; padding: 2rem;"><h3>Impact snapshot</h3><div style="display:flex; justify-content: space-between; margin-top:1rem;"><div><span class="stat-value" style="font-size:1.8rem;">10+</span><br>Years exp</div><div><span class="stat-value" style="font-size:1.8rem;">45M+</span><br>Budget managed</div></div><hr style="margin:1rem 0"><div><span class="stat-value" style="font-size:1.8rem;">1,200+</span><br>Lives impacted</div><hr><h4>Qualifications</h4><p>CPA-K Finalist | BA Christian Ministry Leadership | Certified Mediator | Full-stack dev (in progress)</p></div>
+        <span class="section-tagline">Career timeline</span>
+        <h2 class="section-title">Decade of measurable impact</h2>
+        <div class="timeline-modern">
+          <div class="timeline-node"><div class="timeline-dot"></div><span style="color:#EAB308; font-weight:600;">2021 – 2024</span><h3 style="margin: 0.3rem 0;">Project Coordinator</h3><p style="color:#94A3B8;">Led child protection & family empowerment programs, built strategic partnerships, impacted 1,200+ beneficiaries.</p><div class="skill-bubbles"><span class="skill-badge">Program Mgt</span><span class="skill-badge">Stakeholder engagement</span></div></div>
+          <div class="timeline-node"><div class="timeline-dot"></div><span style="color:#EAB308;">2013 – 2021</span><h3>Project Accountant</h3><p>Multi-donor grant compliance, improved audit ratings, managed multi-million KES grants, youth entrepreneurship training.</p><div class="skill-bubbles"><span class="skill-badge">Grants Mgt</span><span class="skill-badge">Audit readiness</span></div></div>
+          <div class="timeline-node"><div class="timeline-dot"></div><span style="color:#EAB308;">2009 – 2012</span><h3>Inventory Controller</h3><p>Stock accuracy, variance analysis, loss reduction, process optimization in retail.</p></div>
+        </div>
       </div>
+      <div class="card-glass" style="align-self: start;"><h3>Professional snapshot</h3><div style="display: flex; justify-content: space-between; margin: 1rem 0;"><span>Experience</span><strong class="glow-text">10+ years</strong></div><div style="display: flex; justify-content: space-between;"><span>Budget managed</span><strong class="glow-text">KES 45M+</strong></div><hr style="margin: 1rem 0; border-color:rgba(255,255,255,0.1);"><p><i class="fas fa-certificate" style="color:#EAB308;"></i> CPA-K Finalist · BA Leadership · Certified Mediator · Full-stack dev</p><p style="margin-top: 1rem;"><i class="fas fa-globe"></i> Nairobi – Remote & onsite availability</p></div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
+<!-- Projects portfolio -->
+<section id="projects" style="background:#0F172A;">
   <div class="container">
-    <span class="section-tag">Recent work</span>
-    <h2 class="section-title">Selected projects at the intersection of finance & code</h2>
-    <div class="project-grid">
-      <div class="project-card fade-up"><div style="height: 6px; background: var(--gold-core);"></div><div style="padding: 1.8rem;"><span style="font-size:0.7rem; font-weight:600; color:var(--gold-core);">DATA ANALYTICS</span><h3>Financial Data Analysis Portfolio</h3><p style="margin: 0.6rem 0;">Python, Pandas, Matplotlib for real-world financial insights and decision support.</p><a href="https://github.com/danielkthuo/wk-7dataanalysis" target="_blank" style="color: var(--gold-core); text-decoration: none;">GitHub <i class="fas fa-arrow-right"></i></a></div></div>
-      <div class="project-card fade-up"><div style="height: 6px; background: var(--gold-core);"></div><div style="padding: 1.8rem;"><span style="font-size:0.7rem; font-weight:600; color:var(--gold-core);">WEB DEV</span><h3>Photographer Portfolio Platform</h3><p>Responsive dynamic site with gallery management and contact system.</p><a href="https://danielkthuo.github.io/photographer-portfolio/index.html" target="_blank" style="color: var(--gold-core);">Live demo →</a></div></div>
-      <div class="project-card fade-up"><div style="height: 6px; background: var(--gold-core);"></div><div style="padding: 1.8rem;"><span style="font-size:0.7rem; font-weight:600; color:var(--gold-core);">MANAGEMENT SYSTEM</span><h3>College Management System (In progress)</h3><p>PHP, MySQL, JS — student records, fee tracking, staff mgmt, academic reporting.</p><a href="https://danielkthuo.github.io/danielkthuo/website.html" target="_blank" style="color: var(--gold-core);">Preview →</a></div></div>
+    <span class="section-tagline">Portfolio</span>
+    <h2 class="section-title">Where finance meets code & innovation</h2>
+    <div class="grid-3">
+      <div class="card-glass fade-stagger"><div style="height: 4px; width: 60px; background: #EAB308; margin-bottom: 1rem;"></div><span class="skill-badge" style="background:#EAB30820;">Data Analytics</span><h3 style="margin: 0.8rem 0 0.5rem;">Financial Data Analysis</h3><p>Python, Pandas, Matplotlib for financial insights & decision support.</p><a href="https://github.com/danielkthuo/wk-7dataanalysis" target="_blank" style="color:#EAB308; text-decoration: none;">GitHub <i class="fas fa-arrow-right"></i></a></div>
+      <div class="card-glass fade-stagger"><div style="height: 4px; width: 60px; background: #EAB308; margin-bottom: 1rem;"></div><span class="skill-badge">Web Dev</span><h3>Photographer Portfolio Platform</h3><p>Responsive dynamic site with gallery & contact system.</p><a href="https://danielkthuo.github.io/photographer-portfolio/index.html" target="_blank" style="color:#EAB308;">Live demo →</a></div>
+      <div class="card-glass fade-stagger"><div style="height: 4px; width: 60px; background: #EAB308; margin-bottom: 1rem;"></div><span class="skill-badge">Management System</span><h3>College Management System</h3><p>PHP, MySQL, JS — student records, fee tracking, staff management (in progress).</p><a href="https://danielkthuo.github.io/danielkthuo/website.html" target="_blank" style="color:#EAB308;">Preview →</a></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT modern -->
+<!-- Modern Contact -->
 <section id="contact">
   <div class="container">
-    <div class="contact-grid">
-      <div><span class="section-tag">Get in touch</span><h2 class="section-title">Let’s create impact together</h2><p class="section-sub">Financial audit, digital tool, leadership training — one conversation can transform your organization.</p>
-        <div style="display: flex; flex-direction: column; gap: 1rem;"><div><i class="fas fa-envelope" style="color:var(--gold-core); width:2rem;"></i> danyelthuo@gmail.com</div><div><i class="fas fa-phone-alt"></i> +254 734 080808 / +254 722 699212</div><div><i class="fas fa-map-pin"></i> Nairobi, Kenya (remote & onsite)</div></div>
-      </div>
-      <div class="contact-info-card"><h3>Send a message</h3>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1rem 0;"><input type="text" placeholder="First name" class="contact-field"><input type="text" placeholder="Last name" class="contact-field"></div>
-        <input type="email" placeholder="Email address" class="contact-field" style="margin-bottom:1rem;">
-        <select class="contact-field" style="margin-bottom:1rem;"><option>Service interest...</option><option>Financial Systems</option><option>ICT / Web Dev</option><option>Leadership Training</option></select>
-        <textarea rows="4" placeholder="Tell me about your project" class="contact-field" style="margin-bottom:1rem;"></textarea>
-        <button class="btn-primary" style="background: var(--deep-ink); width:100%; justify-content: center;" onclick="alert('Thank you! Daniel will respond within 24 hours.')">Send inquiry <i class="fas fa-paper-plane"></i></button>
-      </div>
+    <div class="contact-wrapper">
+      <div><span class="section-tagline">Start a conversation</span><h2 class="section-title" style="font-size: 2rem;">Let’s build transformative solutions</h2><p class="section-subhead" style="margin-bottom: 1.5rem;">Financial audits, digital tools, leadership frameworks — one conversation can unlock new potential.</p><div style="display: flex; gap: 1rem; flex-direction: column;"><div><i class="fas fa-envelope" style="color:#EAB308; width: 2rem;"></i> danyelthuo@gmail.com</div><div><i class="fas fa-phone-alt"></i> +254 734 080808 / +254 722 699212</div><div><i class="fas fa-map-pin"></i> Nairobi, Kenya (remote & onsite)</div></div></div>
+      <div><h3 style="margin-bottom: 1.5rem;">Send a message</h3><div style="display: grid; grid-template-columns:1fr 1fr; gap:1rem;"><input type="text" placeholder="First name" class="input-group"><input type="text" placeholder="Last name" class="input-group"></div><input type="email" placeholder="Email address" class="input-group" style="margin: 1rem 0;"><select class="input-group" style="margin-bottom:1rem;"><option>Service of interest...</option><option>Financial Systems</option><option>ICT / Web Development</option><option>Leadership Training</option><option>Organizational Design</option></select><textarea rows="4" placeholder="Tell me about your project" class="input-group" style="margin-bottom: 1rem;"></textarea><button class="btn-primary-gold" style="width:100%; justify-content:center; background: #EAB308; color:#0F172A;" onclick="alert('Thank you! Daniel will respond within 24 hours.')">Send inquiry <i class="fas fa-paper-plane"></i></button></div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container"><p>© 2025 Daniel Thuo — Finance, ICT & Leadership Consultant. Nairobi, Kenya</p><div style="margin-top: 1rem;"><a href="#" style="color: var(--gold-core); margin: 0 10px; text-decoration: none;">LinkedIn</a> <a href="https://github.com/danielkthuo" style="color: var(--gold-core); text-decoration: none;">GitHub</a></div></div>
+  <div class="container">
+    <p>© 2025 Daniel Thuo — Finance, ICT & Leadership Consultant. Nairobi, Kenya</p>
+    <div style="margin-top: 1rem;"><a href="#" style="color: #EAB308; margin: 0 12px; text-decoration: none;">LinkedIn</a><a href="https://github.com/danielkthuo" style="color: #EAB308; text-decoration: none;">GitHub</a></div>
+  </div>
 </footer>
 
 <script>
-  // intersection observer for fade-up animations
-  const faders = document.querySelectorAll('.fade-up');
+  const fadeElements = document.querySelectorAll('.fade-stagger');
+  const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -20px 0px" };
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
-  }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
-  faders.forEach(el => observer.observe(el));
+  }, observerOptions);
+  fadeElements.forEach(el => observer.observe(el));
 
-  // smooth navbar scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
-  // shadow on scroll
+
   window.addEventListener('scroll', () => {
     const nav = document.querySelector('.navbar');
-    if (window.scrollY > 20) nav.style.boxShadow = '0 8px 24px rgba(0,0,0,0.05)';
-    else nav.style.boxShadow = 'none';
+    if (window.scrollY > 30) nav.style.background = 'rgba(11, 17, 32, 0.95)';
+    else nav.style.background = 'rgba(11, 17, 32, 0.85)';
   });
 </script>
 </body>
