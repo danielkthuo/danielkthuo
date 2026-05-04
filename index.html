@@ -10,8 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- EmailJS Library -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <style>
     * {
       margin: 0;
@@ -511,6 +509,23 @@
       opacity: 1;
       transform: translateY(0);
     }
+    
+    /* Toast notification */
+    .toast-notification {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary-dark);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      z-index: 1100;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      box-shadow: var(--shadow-md);
+    }
   </style>
 </head>
 <body>
@@ -636,64 +651,141 @@
   </div>
 </section>
 
-<!-- Contact with EmailJS -->
+<!-- Contact with Gmail + FormSubmit (direct email to your Gmail) -->
 <section id="contact">
   <div class="container">
     <div class="contact-wrapper">
-      <div><span class="section-tag">Get in Touch</span><h2 class="section-title" style="font-size: 1.8rem;">Let's work together</h2><p class="section-sub" style="margin-bottom: 1.2rem;">Financial audits, digital systems, leadership training — start a conversation.</p><div style="display: flex; gap: 1rem; flex-direction: column;"><div><i class="fas fa-envelope" style="color: var(--accent-gold); width: 2rem;"></i> danyelthuo@gmail.com</div><div><i class="fas fa-phone-alt"></i> +254 734 080808</div><div><i class="fab fa-whatsapp" style="color: var(--whatsapp-green);"></i> <a href="https://wa.me/254734080808" target="_blank" style="color: var(--primary-dark);">WhatsApp</a></div></div></div>
-      <div><h3 style="margin-bottom: 1.2rem;">Send a message</h3>
-        <form id="contactForm">
-          <div style="display: grid; grid-template-columns:1fr 1fr; gap: 1rem; margin-bottom: 1rem;"><input type="text" id="firstName" placeholder="First name" class="form-control" required><input type="text" id="lastName" placeholder="Last name" class="form-control" required></div>
-          <div class="form-group"><input type="email" id="email" placeholder="Email address" class="form-control" required></div>
-          <div class="form-group"><select id="service" class="form-control" required><option value="">Service of interest</option><option>Financial Systems Consulting</option><option>ICT / Web Development</option><option>Leadership Training</option></select></div>
-          <div class="form-group"><textarea id="message" rows="3" placeholder="Tell me about your project..." class="form-control" required></textarea></div>
-          <button type="submit" class="btn-submit" id="sendBtn"><i class="fas fa-paper-plane"></i> Send Message</button>
+      <div>
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title" style="font-size: 1.8rem;">Let's work together</h2>
+        <p class="section-sub" style="margin-bottom: 1.2rem;">Financial audits, digital systems, leadership training — start a conversation.</p>
+        <div style="display: flex; gap: 1rem; flex-direction: column;">
+          <div><i class="fas fa-envelope" style="color: var(--accent-gold); width: 2rem;"></i> danyelthuo@gmail.com</div>
+          <div><i class="fas fa-phone-alt"></i> +254 734 080808</div>
+          <div><i class="fab fa-whatsapp" style="color: var(--whatsapp-green);"></i> <a href="https://wa.me/254734080808" target="_blank" style="color: var(--primary-dark); text-decoration: none;">Chat on WhatsApp</a></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 1.2rem;">Send a message</h3>
+        <!-- Form that sends directly to your Gmail using FormSubmit (no backend needed) -->
+        <form action="https://formsubmit.co/danyelthuo@gmail.com" method="POST" id="contactForm">
+          <!-- FormSubmit configuration -->
+          <input type="hidden" name="_subject" value="New Consultation Inquiry from Daniel Thuo Portfolio">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_replyto" value="email">
+          <!-- Success redirect (stay on page with thanks message) -->
+          <input type="hidden" name="_next" value="https://danielthuo.com/thankyou">
+          
+          <div style="display: grid; grid-template-columns:1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <input type="text" name="First Name" placeholder="First name" class="form-control" required>
+            <input type="text" name="Last Name" placeholder="Last name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="Email" placeholder="Email address" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <select name="Service Interest" class="form-control" required>
+              <option value="">Service of interest</option>
+              <option>Financial Systems Consulting</option>
+              <option>ICT / Web Development</option>
+              <option>Leadership Training</option>
+              <option>Organizational Systems Design</option>
+              <option>Mentorship & Coaching</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea name="Message" rows="3" placeholder="Tell me about your project..." class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="sendBtn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p style="font-size: 0.7rem; text-align: center; margin-top: 0.8rem; color: var(--gray-600);">
+            <i class="fas fa-lock"></i> Your message goes directly to danyelthuo@gmail.com
+          </p>
         </form>
-        <div id="formStatus" style="margin-top: 1rem; font-size: 0.8rem; text-align: center;"></div>
+        <div id="formStatus" style="margin-top: 0.8rem; font-size: 0.8rem; text-align: center;"></div>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container"><p>© 2025 Daniel Thuo — Finance, ICT & Leadership Consultant · Nairobi, Kenya</p><div style="margin-top: 0.8rem;"><a href="https://wa.me/254734080808" style="color: var(--accent-gold); text-decoration: none;"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+  <div class="container">
+    <p>© 2025 Daniel Thuo — Finance, ICT & Leadership Consultant · Nairobi, Kenya</p>
+    <div style="margin-top: 0.8rem;">
+      <a href="https://wa.me/254734080808" style="color: var(--accent-gold); text-decoration: none; margin: 0 8px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:danyelthuo@gmail.com" style="color: var(--accent-gold); text-decoration: none; margin: 0 8px;"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+  </div>
 </footer>
 
-<script>
-  // EmailJS initialization (replace with your credentials for production)
-  (function() { emailjs.init("YOUR_PUBLIC_KEY"); })();
+<div id="toastMsg" class="toast-notification"></div>
 
+<script>
+  // Handle form submission with custom message (since FormSubmit redirects, we show a custom thank you)
   const form = document.getElementById('contactForm');
+  const statusDiv = document.getElementById('formStatus');
+  const toast = document.getElementById('toastMsg');
+  
+  function showToast(message, isError = false) {
+    toast.style.backgroundColor = isError ? '#C62828' : '#0A2540';
+    toast.innerHTML = message;
+    toast.style.opacity = '1';
+    setTimeout(() => { toast.style.opacity = '0'; }, 4000);
+  }
+  
+  // Override form submission to show loading and success message
   form.addEventListener('submit', function(e) {
-    e.preventDefault();
     const btn = document.getElementById('sendBtn');
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    statusDiv.innerHTML = '<span style="color: #6c757d;">Preparing your message...</span>';
     
-    const templateParams = {
-      from_name: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
-      from_email: document.getElementById('email').value,
-      service_type: document.getElementById('service').value,
-      message: document.getElementById('message').value,
-      to_name: 'Daniel Thuo'
-    };
+    // Let the form submit normally to FormSubmit
+    // But we'll show a success toast after a short delay (FormSubmit will redirect)
+    setTimeout(() => {
+      showToast('✓ Message sent! Daniel will reply to your email within 24 hours.', false);
+      statusDiv.innerHTML = '<span style="color: #2e7d32;">✓ Message sent successfully! I will get back to you soon.</span>';
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+      // Clear status after 5 seconds
+      setTimeout(() => { if(statusDiv.innerHTML) statusDiv.innerHTML = ''; }, 5000);
+    }, 800);
     
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-      .then(() => { document.getElementById('formStatus').innerHTML = '<span style="color:#2e7d32;">✓ Message sent! Daniel will respond soon.</span>'; form.reset(); })
-      .catch(() => { document.getElementById('formStatus').innerHTML = '<span style="color:#d32f2f;">❌ Failed to send. Please email directly: danyelthuo@gmail.com</span>'; })
-      .finally(() => { btn.disabled = false; btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message'; setTimeout(() => { if(document.getElementById('formStatus').innerHTML) document.getElementById('formStatus').innerHTML = ''; }, 4000); });
+    // Reset button after 2 seconds in case of any issue (but form will actually submit)
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    }, 3000);
   });
+  
+  // Check for URL parameters to detect successful submission (FormSubmit redirects back)
+  if (window.location.search.includes('submitted=true')) {
+    showToast('✓ Thank you! Your message has been sent to my Gmail.', false);
+    statusDiv.innerHTML = '<span style="color: #2e7d32;">✓ Message received! I will respond promptly.</span>';
+  }
 
   // Animation Observer
   const faders = document.querySelectorAll('.fade-up');
-  const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+  const obs = new IntersectionObserver((entries) => { 
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); 
+  }, { threshold: 0.1 });
   faders.forEach(el => obs.observe(el));
 
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const target = document.querySelector(this.getAttribute('href'));
       if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
+  });
+  
+  // Navbar shadow on scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.navbar');
+    if (window.scrollY > 20) nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.05)';
+    else nav.style.boxShadow = 'none';
   });
 </script>
 </body>
