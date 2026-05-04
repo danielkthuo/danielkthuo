@@ -38,6 +38,7 @@
       --shadow-lg: 0 20px 35px -8px rgba(0, 0, 0, 0.1);
       --shadow-gold: 0 10px 25px -8px rgba(198, 164, 63, 0.15);
       --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      --whatsapp-green: #25D366;
     }
 
     body {
@@ -240,6 +241,67 @@
       color: var(--accent-gold);
     }
 
+    /* WhatsApp Button Section */
+    .whatsapp-section {
+      background: linear-gradient(135deg, #0A2540 0%, #123456 100%);
+      border-radius: 28px;
+      padding: 3rem 2rem;
+      margin: 2rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .whatsapp-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 60%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(37, 211, 102, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .whatsapp-title {
+      font-size: 1.8rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .whatsapp-sub {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1.8rem;
+      font-size: 1rem;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--whatsapp-green);
+      color: white;
+      padding: 14px 38px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: var(--transition);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-3px);
+      background: #20B859;
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.4);
+    }
+
+    .whatsapp-alternative {
+      margin-top: 1.2rem;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
     /* Premium Stats Card */
     .stats-card {
       background: white;
@@ -346,6 +408,9 @@
       border-radius: 30px;
       padding: 5px 14px;
       font-size: 0.7rem;
+      display: inline-block;
+      margin-right: 6px;
+      margin-top: 8px;
     }
 
     /* Services */
@@ -462,6 +527,7 @@
       .service-featured { grid-column: span 1; }
       .contact-wrapper { grid-template-columns: 1fr; }
       section { padding: 70px 0; }
+      .whatsapp-title { font-size: 1.4rem; }
     }
 
     .fade-up {
@@ -527,6 +593,26 @@
   </div>
 </section>
 
+<!-- WhatsApp Connect Section - Dedicated & Professional -->
+<section id="whatsapp-connect">
+  <div class="container">
+    <div class="whatsapp-section fade-up">
+      <i class="fab fa-whatsapp" style="font-size: 3rem; color: #25D366; margin-bottom: 0.8rem; display: inline-block;"></i>
+      <h3 class="whatsapp-title">Let's talk on WhatsApp</h3>
+      <p class="whatsapp-sub">Prefer instant messaging? Reach out directly for quick consultations or inquiries.</p>
+      <a href="https://wa.me/254734080808?text=Hello%20Daniel%2C%20I%27m%20interested%20in%20your%20consulting%20services." 
+         class="whatsapp-btn" 
+         target="_blank" 
+         rel="noopener noreferrer">
+        <i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i> Chat on WhatsApp
+      </a>
+      <div class="whatsapp-alternative">
+        <i class="fas fa-phone-alt"></i> Alternative: +254 722 699212 | +254 734 080808
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- About Section -->
 <section id="about">
   <div class="container">
@@ -548,9 +634,9 @@
     <h2 class="section-title">Cross-functional mastery</h2>
     <p class="section-sub">Financial rigor · Digital innovation · Strategic leadership</p>
     <div class="grid-3">
-      <div class="expertise-card"><i class="fas fa-file-invoice-dollar" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3 style="margin:0.8rem 0 0.5rem;">Finance & Accounting</h3><p>Financial reporting, grant compliance, ERP, budgeting, risk analysis.</p><div class="skill-tag" style="display: inline-block; margin-top: 1rem;">Donor funds</div> <div class="skill-tag" style="display: inline-block;">Audit prep</div> <div class="skill-tag" style="display: inline-block;">Internal controls</div></div>
-      <div class="expertise-card"><i class="fas fa-database" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>ICT & Digital Systems</h3><p>Custom web apps, Power BI analytics, MIS architecture, database design.</p><div class="skill-tag" style="display: inline-block; margin-top: 1rem;">PHP/Python</div> <div class="skill-tag">MySQL</div> <div class="skill-tag">Data Viz</div></div>
-      <div class="expertise-card"><i class="fas fa-chalkboard-user" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>Leadership & Training</h3><p>Mediation, strategic governance, program management, mentorship.</p><div class="skill-tag" style="display: inline-block; margin-top: 1rem;">Project Mgt</div> <div class="skill-tag">Conflict resolution</div></div>
+      <div class="expertise-card"><i class="fas fa-file-invoice-dollar" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3 style="margin:0.8rem 0 0.5rem;">Finance & Accounting</h3><p>Financial reporting, grant compliance, ERP, budgeting, risk analysis.</p><div><span class="skill-tag">Donor funds</span> <span class="skill-tag">Audit prep</span> <span class="skill-tag">Internal controls</span></div></div>
+      <div class="expertise-card"><i class="fas fa-database" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>ICT & Digital Systems</h3><p>Custom web apps, Power BI analytics, MIS architecture, database design.</p><div><span class="skill-tag">PHP/Python</span> <span class="skill-tag">MySQL</span> <span class="skill-tag">Data Viz</span></div></div>
+      <div class="expertise-card"><i class="fas fa-chalkboard-user" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>Leadership & Training</h3><p>Mediation, strategic governance, program management, mentorship.</p><div><span class="skill-tag">Project Mgt</span> <span class="skill-tag">Conflict resolution</span></div></div>
     </div>
   </div>
 </section>
@@ -593,7 +679,7 @@
 <section id="contact">
   <div class="container">
     <div class="contact-wrapper">
-      <div><span class="section-tag">Start a conversation</span><h2 class="section-title" style="font-size: 2rem;">Let’s build transformative solutions</h2><p class="section-sub" style="margin-bottom: 1.5rem;">Financial audits, digital tools, leadership frameworks — one conversation can unlock new potential.</p><div style="display: flex; gap: 1rem; flex-direction: column;"><div><i class="fas fa-envelope" style="color: var(--accent-gold); width: 2rem;"></i> danyelthuo@gmail.com</div><div><i class="fas fa-phone-alt"></i> +254 734 080808 / +254 722 699212</div><div><i class="fas fa-map-pin"></i> Nairobi, Kenya (remote & onsite)</div></div></div>
+      <div><span class="section-tag">Start a conversation</span><h2 class="section-title" style="font-size: 2rem;">Let's build transformative solutions</h2><p class="section-sub" style="margin-bottom: 1.5rem;">Financial audits, digital tools, leadership frameworks — one conversation can unlock new potential.</p><div style="display: flex; gap: 1rem; flex-direction: column;"><div><i class="fas fa-envelope" style="color: var(--accent-gold); width: 2rem;"></i> danyelthuo@gmail.com</div><div><i class="fas fa-phone-alt"></i> +254 734 080808 / +254 722 699212</div><div><i class="fas fa-map-pin"></i> Nairobi, Kenya (remote & onsite)</div><div><i class="fab fa-whatsapp" style="color: var(--whatsapp-green); width: 2rem;"></i> <a href="https://wa.me/254734080808" target="_blank" style="color: var(--primary-dark); text-decoration: none;">Chat on WhatsApp</a></div></div></div>
       <div><h3 style="margin-bottom: 1.5rem;">Send a professional inquiry</h3>
         <form id="contactForm">
           <div class="form-group"><input type="text" id="firstName" placeholder="First name" class="form-control" required></div>
@@ -610,14 +696,15 @@
 </section>
 
 <footer>
-  <div class="container"><p>© 2025 Daniel Thuo — Finance, ICT & Leadership Consultant. Nairobi, Kenya</p><div style="margin-top: 1rem;"><a href="#" style="color: var(--accent-gold); margin: 0 12px; text-decoration: none;">LinkedIn</a><a href="https://github.com/danielkthuo" style="color: var(--accent-gold); text-decoration: none;">GitHub</a></div></div>
+  <div class="container"><p>© 2025 Daniel Thuo — Finance, ICT & Leadership Consultant. Nairobi, Kenya</p><div style="margin-top: 1rem;"><a href="#" style="color: var(--accent-gold); margin: 0 12px; text-decoration: none;">LinkedIn</a><a href="https://github.com/danielkthuo" style="color: var(--accent-gold); text-decoration: none;">GitHub</a><a href="https://wa.me/254734080808" style="color: var(--whatsapp-green); margin-left: 12px; text-decoration: none;"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
 </footer>
 <div id="toastMsg" class="toast-message"></div>
 
 <script>
-  // Initialize EmailJS (Public Key)
+  // Initialize EmailJS (Public Key - replace with actual after signup)
   (function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with actual EmailJS public key after signup
+    // Register at emailjs.com and replace with your public key
+    emailjs.init("YOUR_PUBLIC_KEY"); 
   })();
 
   const form = document.getElementById('contactForm');
@@ -653,8 +740,8 @@
         form.reset();
         showToast('Message delivered successfully!');
       }, function(error) {
-        statusDiv.innerHTML = '<span style="color: #d32f2f;">❌ Failed to send. Please email directly: danyelthuo@gmail.com</span>';
-        showToast('Error sending message, please try again or use direct email.', true);
+        statusDiv.innerHTML = '<span style="color: #d32f2f;">❌ Failed to send. Please email directly: danyelthuo@gmail.com or WhatsApp +254734080808</span>';
+        showToast('Error sending message, please try again or use direct contact.', true);
         console.error(error);
       })
       .finally(() => {
