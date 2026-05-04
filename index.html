@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Daniel Thuo - Finance, ICT & Leadership Consultant. Expert in financial systems, digital transformation, and strategic leadership for NGOs, SMEs, and institutions.">
+  <meta name="description" content="Daniel Thuo - Finance, ICT & Leadership Consultant. Expert in financial systems, digital transformation, and strategic leadership.">
   <meta name="theme-color" content="#0A2540">
   <title>Daniel Thuo | Finance • ICT • Leadership Consultant</title>
   <!-- Google Fonts -->
@@ -20,18 +20,15 @@
     }
 
     :root {
-      --primary-dark: #0A2540;      /* Deep navy - sophisticated */
+      --primary-dark: #0A2540;
       --primary-mid: #1A3A5F;
-      --accent-gold: #C6A43F;       /* Refined gold */
+      --accent-gold: #C6A43F;
       --accent-gold-light: #DDB55E;
-      --accent-muted: #8B7A4B;
       --gray-50: #F8F9FA;
       --gray-100: #F1F3F5;
       --gray-200: #E9ECEF;
       --gray-600: #6C757D;
       --gray-700: #495057;
-      --gray-800: #343A40;
-      --text-dark: #212529;
       --white: #FFFFFF;
       --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
       --shadow-md: 0 12px 28px rgba(0, 0, 0, 0.06);
@@ -44,16 +41,17 @@
     body {
       font-family: 'Inter', sans-serif;
       background: var(--white);
-      color: var(--text-dark);
+      color: var(--gray-700);
       line-height: 1.55;
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
 
-    h1, h2, h3, h4, .serif {
+    h1, h2, h3, h4 {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
       letter-spacing: -0.01em;
+      color: var(--primary-dark);
     }
 
     .container {
@@ -62,7 +60,7 @@
       padding: 0 40px;
     }
 
-    /* Navigation - Clean Professional */
+    /* Navigation */
     .navbar {
       position: fixed;
       top: 0;
@@ -79,7 +77,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 78px;
+      height: 76px;
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 40px;
@@ -90,11 +88,10 @@
       font-size: 1.9rem;
       font-weight: 700;
       color: var(--primary-dark);
-      letter-spacing: -0.02em;
     }
 
     .logo span {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 400;
       color: var(--accent-gold);
       letter-spacing: 0.5px;
@@ -102,7 +99,7 @@
 
     .nav-links {
       display: flex;
-      gap: 2.2rem;
+      gap: 2rem;
       align-items: center;
     }
 
@@ -112,7 +109,6 @@
       font-weight: 500;
       color: var(--gray-700);
       transition: var(--transition);
-      letter-spacing: 0.3px;
     }
 
     .nav-links a:hover {
@@ -126,6 +122,7 @@
       background: transparent;
       color: var(--accent-gold);
       font-weight: 600;
+      transition: var(--transition);
     }
 
     .btn-outline:hover {
@@ -139,20 +136,54 @@
       .container { padding: 0 24px; }
     }
 
-    /* Hero Section */
+    /* Hero Section with Profile Image */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 140px 0 80px;
+      padding: 120px 0 80px;
       background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 0.85fr;
+      grid-template-columns: 1fr 0.9fr;
       gap: 4rem;
       align-items: center;
+    }
+
+    .hero-content {
+      order: 1;
+    }
+
+    .hero-image-col {
+      order: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile-img-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    .profile-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: var(--shadow-lg);
+      border: 5px solid white;
+      outline: 1px solid rgba(198, 164, 63, 0.3);
+      transition: var(--transition);
+    }
+
+    .profile-img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.2);
     }
 
     .badge {
@@ -163,15 +194,13 @@
       font-size: 0.7rem;
       font-weight: 600;
       color: var(--accent-gold);
-      margin-bottom: 1.8rem;
-      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
     }
 
     .hero-title {
-      font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
       line-height: 1.15;
-      color: var(--primary-dark);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     .hero-title .gold {
@@ -181,8 +210,8 @@
     }
 
     .hero-desc {
-      font-size: 1.05rem;
-      color: var(--gray-700);
+      font-size: 1rem;
+      color: var(--gray-600);
       max-width: 90%;
       margin: 1.2rem 0 1.8rem;
       line-height: 1.65;
@@ -191,19 +220,18 @@
     .pill-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       margin: 1.5rem 0 2rem;
     }
 
     .pill {
       background: white;
       border: 1px solid var(--gray-200);
-      padding: 6px 18px;
+      padding: 5px 16px;
       border-radius: 40px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 500;
       color: var(--gray-700);
-      box-shadow: var(--shadow-sm);
     }
 
     .btn-primary {
@@ -222,7 +250,6 @@
     .btn-primary:hover {
       background: var(--accent-gold);
       transform: translateY(-2px);
-      box-shadow: var(--shadow-gold);
     }
 
     .btn-secondary {
@@ -241,85 +268,24 @@
       color: var(--accent-gold);
     }
 
-    /* WhatsApp Button Section */
-    .whatsapp-section {
-      background: linear-gradient(135deg, #0A2540 0%, #123456 100%);
-      border-radius: 28px;
-      padding: 3rem 2rem;
-      margin: 2rem 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .whatsapp-section::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 60%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(37, 211, 102, 0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .whatsapp-title {
-      font-size: 1.8rem;
-      color: white;
-      margin-bottom: 1rem;
-    }
-
-    .whatsapp-sub {
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 1.8rem;
-      font-size: 1rem;
-    }
-
-    .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--whatsapp-green);
-      color: white;
-      padding: 14px 38px;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1rem;
-      transition: var(--transition);
-      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
-    }
-
-    .whatsapp-btn:hover {
-      transform: translateY(-3px);
-      background: #20B859;
-      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.4);
-    }
-
-    .whatsapp-alternative {
-      margin-top: 1.2rem;
-      font-size: 0.8rem;
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    /* Premium Stats Card */
+    /* Stats Card */
     .stats-card {
       background: white;
       border-radius: 28px;
-      padding: 2rem;
+      padding: 1.8rem;
       box-shadow: var(--shadow-lg);
-      border: 1px solid rgba(0, 0, 0, 0.04);
+      border: 1px solid var(--gray-200);
     }
 
     .stat-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.6rem;
-      margin-bottom: 1.8rem;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .stat-number {
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 700;
       font-family: 'Cormorant Garamond', serif;
       color: var(--accent-gold);
@@ -327,15 +293,16 @@
 
     .cert-row {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       align-items: center;
-      padding: 12px 0;
+      padding: 10px 0;
       border-top: 1px solid var(--gray-200);
+      font-size: 0.8rem;
     }
 
-    /* Section Styles */
+    /* Sections */
     section {
-      padding: 100px 0;
+      padding: 80px 0;
     }
 
     .section-tag {
@@ -344,46 +311,50 @@
       font-size: 0.7rem;
       font-weight: 600;
       color: var(--accent-gold);
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       display: inline-block;
     }
 
     .section-title {
-      font-size: clamp(2rem, 3.8vw, 3rem);
-      color: var(--primary-dark);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
       margin-bottom: 1rem;
     }
 
     .section-sub {
       color: var(--gray-600);
-      max-width: 680px;
-      margin-bottom: 3rem;
+      max-width: 650px;
+      margin-bottom: 2.5rem;
     }
 
     .card-elegant {
       background: white;
       border-radius: 24px;
-      padding: 2rem;
+      padding: 1.8rem;
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
       border: 1px solid var(--gray-200);
     }
 
     .card-elegant:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
       box-shadow: var(--shadow-md);
       border-color: rgba(198, 164, 63, 0.3);
     }
 
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
 
-    /* Expertise Dark Section */
+    /* Dark Section */
     .dark-section {
       background: var(--primary-dark);
+      color: white;
+    }
+
+    .dark-section .section-title,
+    .dark-section h3 {
       color: white;
     }
 
@@ -391,33 +362,28 @@
       color: rgba(255, 255, 255, 0.7);
     }
 
-    .dark-section .section-title {
-      color: white;
-    }
-
     .expertise-card {
       background: rgba(255, 255, 255, 0.05);
       border-radius: 24px;
-      padding: 2rem;
+      padding: 1.8rem;
       border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: var(--transition);
     }
 
     .skill-tag {
       background: rgba(255, 255, 255, 0.08);
       border-radius: 30px;
-      padding: 5px 14px;
+      padding: 4px 12px;
       font-size: 0.7rem;
       display: inline-block;
       margin-right: 6px;
       margin-top: 8px;
     }
 
-    /* Services */
+    /* Services Grid */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+      gap: 1.8rem;
     }
 
     .service-featured {
@@ -429,27 +395,53 @@
     /* Timeline */
     .timeline {
       position: relative;
-      padding-left: 2rem;
+      padding-left: 1.8rem;
       border-left: 2px solid var(--accent-gold);
     }
 
     .timeline-item {
       position: relative;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
 
     .timeline-dot {
       position: absolute;
-      left: -2.4rem;
-      top: 0.3rem;
-      width: 12px;
-      height: 12px;
+      left: -2.2rem;
+      top: 0.2rem;
+      width: 10px;
+      height: 10px;
       background: var(--accent-gold);
       border-radius: 50%;
-      box-shadow: 0 0 0 4px rgba(198, 164, 63, 0.2);
+      box-shadow: 0 0 0 3px rgba(198, 164, 63, 0.2);
     }
 
-    /* Contact Form */
+    /* WhatsApp Section */
+    .whatsapp-section {
+      background: linear-gradient(135deg, #0A2540 0%, #123456 100%);
+      border-radius: 28px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--whatsapp-green);
+      color: white;
+      padding: 12px 32px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: var(--transition);
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-2px);
+      background: #20B859;
+    }
+
+    /* Contact */
     .contact-wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -461,25 +453,18 @@
       border: 1px solid var(--gray-200);
     }
 
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
-
     .form-control {
       width: 100%;
-      padding: 14px 18px;
+      padding: 12px 16px;
       border: 1px solid var(--gray-200);
       border-radius: 16px;
       font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      transition: var(--transition);
       background: var(--gray-50);
     }
 
     .form-control:focus {
       outline: none;
       border-color: var(--accent-gold);
-      box-shadow: 0 0 0 3px rgba(198, 164, 63, 0.1);
     }
 
     .btn-submit {
@@ -487,31 +472,15 @@
       color: white;
       border: none;
       width: 100%;
-      padding: 14px;
+      padding: 12px;
       border-radius: 40px;
       font-weight: 600;
-      font-size: 1rem;
       cursor: pointer;
       transition: var(--transition);
     }
 
     .btn-submit:hover {
       background: var(--accent-gold);
-    }
-
-    .toast-message {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: var(--primary-dark);
-      color: white;
-      padding: 12px 24px;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      z-index: 1100;
-      opacity: 0;
-      transition: opacity 0.3s;
-      pointer-events: none;
     }
 
     footer {
@@ -522,18 +491,20 @@
     }
 
     @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+      .hero-desc { max-width: 100%; }
+      .pill-group { justify-content: center; }
       .services-grid { grid-template-columns: 1fr; }
       .service-featured { grid-column: span 1; }
       .contact-wrapper { grid-template-columns: 1fr; }
-      section { padding: 70px 0; }
-      .whatsapp-title { font-size: 1.4rem; }
+      section { padding: 60px 0; }
+      .profile-img-wrapper { max-width: 260px; margin-bottom: 1rem; }
     }
 
     .fade-up {
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+      transform: translateY(25px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     .fade-up.visible {
@@ -549,7 +520,6 @@
     <div class="logo">Daniel Thuo <span>// Consultant</span></div>
     <div class="nav-links">
       <a href="#home">Home</a>
-      <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
       <a href="#services">Services</a>
       <a href="#experience">Experience</a>
@@ -558,216 +528,172 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero Section with Rounded Profile Photo -->
 <section class="hero" id="home">
   <div class="container">
     <div class="hero-grid">
-      <div>
-        <div class="badge"><i class="fas fa-map-marker-alt" style="margin-right: 6px;"></i> Nairobi, Kenya · Worldwide</div>
+      <div class="hero-content">
+        <div class="badge"><i class="fas fa-map-marker-alt" style="margin-right: 6px;"></i> Nairobi, Kenya</div>
         <h1 class="hero-title">Finance meets <span class="gold">systems & leadership</span></h1>
-        <p class="hero-desc">Daniel Thuo integrates financial strategy, ICT architecture, and leadership development — 10+ years transforming NGOs, SMEs, and institutions with precision and accountability.</p>
+        <p class="hero-desc">10+ years integrating financial strategy, ICT architecture, and leadership development for NGOs, SMEs, and institutions.</p>
         <div class="pill-group">
           <span class="pill"><i class="fas fa-chart-line"></i> Financial Systems</span>
           <span class="pill"><i class="fas fa-code"></i> ICT Solutions</span>
           <span class="pill"><i class="fas fa-users"></i> Leadership Trainer</span>
           <span class="pill"><i class="fas fa-handshake"></i> Certified Mediator</span>
         </div>
-        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
           <a href="#services" class="btn-primary">Explore Services <i class="fas fa-arrow-right"></i></a>
-          <a href="#contact" class="btn-secondary">Schedule a Call</a>
+          <a href="#contact" class="btn-secondary">Get In Touch</a>
         </div>
       </div>
-      <div class="stats-card">
-        <div class="stat-grid">
-          <div><span class="stat-number">10+</span><div style="color: var(--gray-600); font-size:0.8rem;">Years Experience</div></div>
-          <div><span class="stat-number">45M+</span><div style="color: var(--gray-600);">KES Oversight</div></div>
-          <div><span class="stat-number">1.2K+</span><div style="color: var(--gray-600);">Lives Impacted</div></div>
-          <div><span class="stat-number">70%</span><div style="color: var(--gray-600);">Families Empowered</div></div>
+      <div class="hero-image-col">
+        <div class="profile-img-wrapper">
+          <!-- REPLACE THIS IMAGE URL WITH YOUR PROFILE PHOTO -->
+          <img src="2025.png" alt="Daniel Thuo" class="profile-img" id="profile-photo">
         </div>
-        <div class="cert-row"><i class="fas fa-graduation-cap" style="color: var(--accent-gold); width: 32px;"></i><div><strong>CPA-K Finalist</strong><br>ICPAK</div></div>
-        <div class="cert-row"><i class="fas fa-scale-balanced" style="color: var(--accent-gold); width: 32px;"></i><div><strong>Certified Mediator</strong><br>Conflict Resolution & Negotiation</div></div>
-        <div class="cert-row"><i class="fas fa-church" style="color: var(--accent-gold); width: 32px;"></i><div><strong>BA Christian Ministry Leadership</strong><br>Governance, Ethics & Community</div></div>
-        <div class="cert-row"><i class="fas fa-laptop-code" style="color: var(--accent-gold); width: 32px;"></i><div><strong>Full-Stack Developer (In Progress)</strong><br>PHP, Python, Power BI, MySQL</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WhatsApp Connect Section - Dedicated & Professional -->
-<section id="whatsapp-connect">
+<!-- Stats & Credentials Section -->
+<section style="padding: 0 0 60px 0;">
   <div class="container">
-    <div class="whatsapp-section fade-up">
-      <i class="fab fa-whatsapp" style="font-size: 3rem; color: #25D366; margin-bottom: 0.8rem; display: inline-block;"></i>
-      <h3 class="whatsapp-title">Let's talk on WhatsApp</h3>
-      <p class="whatsapp-sub">Prefer instant messaging? Reach out directly for quick consultations or inquiries.</p>
-      <a href="https://wa.me/254734080808?text=Hello%20Daniel%2C%20I%27m%20interested%20in%20your%20consulting%20services." 
-         class="whatsapp-btn" 
-         target="_blank" 
-         rel="noopener noreferrer">
-        <i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i> Chat on WhatsApp
-      </a>
-      <div class="whatsapp-alternative">
-        <i class="fas fa-phone-alt"></i> Alternative: +254 722 699212 | +254 734 080808
+    <div class="stats-card">
+      <div class="stat-grid">
+        <div><span class="stat-number">10+</span><div style="color: var(--gray-600); font-size:0.8rem;">Years Experience</div></div>
+        <div><span class="stat-number">45M+</span><div style="color: var(--gray-600);">KES Oversight</div></div>
+        <div><span class="stat-number">1.2K+</span><div style="color: var(--gray-600);">Lives Impacted</div></div>
+        <div><span class="stat-number">70%</span><div style="color: var(--gray-600);">Families Empowered</div></div>
       </div>
+      <div class="cert-row"><i class="fas fa-graduation-cap" style="color: var(--accent-gold); width: 32px;"></i><div><strong>CPA-K Finalist</strong> · ICPAK</div></div>
+      <div class="cert-row"><i class="fas fa-scale-balanced" style="color: var(--accent-gold); width: 32px;"></i><div><strong>Certified Mediator</strong> · Conflict Resolution</div></div>
+      <div class="cert-row"><i class="fas fa-laptop-code" style="color: var(--accent-gold); width: 32px;"></i><div><strong>Full-Stack Developer</strong> · PHP, Python, Power BI</div></div>
     </div>
   </div>
 </section>
 
-<!-- About Section -->
-<section id="about">
-  <div class="container">
-    <span class="section-tag">Why Partner With Me</span>
-    <h2 class="section-title">A rare triple-expertise architect</h2>
-    <p class="section-sub">Most consultants offer one discipline. I bridge finance, technology, and human systems — solving complex challenges end-to-end.</p>
-    <div class="grid-3">
-      <div class="card-elegant fade-up"><i class="fas fa-chart-pie" style="font-size: 2rem; color: var(--accent-gold);"></i><h3 style="margin: 1rem 0 0.5rem;">Financial Acumen</h3><p>CPA-K finalist with multi-million donor grant management, audit readiness, internal controls, and transparent fiscal frameworks.</p></div>
-      <div class="card-elegant fade-up"><i class="fas fa-microchip" style="font-size: 2rem; color: var(--accent-gold);"></i><h3 style="margin: 1rem 0 0.5rem;">ICT Systems Design</h3><p>Full-stack development (PHP, Python, JS, Power BI) to build MIS, dashboards, and digital transformation roadmaps.</p></div>
-      <div class="card-elegant fade-up"><i class="fas fa-brain" style="font-size: 2rem; color: var(--accent-gold);"></i><h3 style="margin: 1rem 0 0.5rem;">Leadership & Systems Thinking</h3><p>Certified mediator, ordained minister, capacity building specialist — governance frameworks that transform institutions.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Expertise Dark Section -->
+<!-- Expertise Section -->
 <section class="dark-section" id="expertise">
   <div class="container">
-    <span class="section-tag">Core Domains</span>
-    <h2 class="section-title">Cross-functional mastery</h2>
+    <span class="section-tag">Core Competencies</span>
+    <h2 class="section-title">Cross-domain expertise</h2>
     <p class="section-sub">Financial rigor · Digital innovation · Strategic leadership</p>
     <div class="grid-3">
-      <div class="expertise-card"><i class="fas fa-file-invoice-dollar" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3 style="margin:0.8rem 0 0.5rem;">Finance & Accounting</h3><p>Financial reporting, grant compliance, ERP, budgeting, risk analysis.</p><div><span class="skill-tag">Donor funds</span> <span class="skill-tag">Audit prep</span> <span class="skill-tag">Internal controls</span></div></div>
-      <div class="expertise-card"><i class="fas fa-database" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>ICT & Digital Systems</h3><p>Custom web apps, Power BI analytics, MIS architecture, database design.</p><div><span class="skill-tag">PHP/Python</span> <span class="skill-tag">MySQL</span> <span class="skill-tag">Data Viz</span></div></div>
-      <div class="expertise-card"><i class="fas fa-chalkboard-user" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>Leadership & Training</h3><p>Mediation, strategic governance, program management, mentorship.</p><div><span class="skill-tag">Project Mgt</span> <span class="skill-tag">Conflict resolution</span></div></div>
+      <div class="expertise-card fade-up"><i class="fas fa-file-invoice-dollar" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3 style="margin:0.8rem 0 0.5rem;">Finance & Accounting</h3><p>Grant compliance, audit readiness, ERP systems, budgeting, internal controls.</p><div><span class="skill-tag">Donor funds</span><span class="skill-tag">Audit prep</span><span class="skill-tag">QuickBooks</span></div></div>
+      <div class="expertise-card fade-up"><i class="fas fa-database" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>ICT & Digital Systems</h3><p>Custom web apps, Power BI analytics, MIS, database design.</p><div><span class="skill-tag">PHP/Python</span><span class="skill-tag">MySQL</span><span class="skill-tag">Data Viz</span></div></div>
+      <div class="expertise-card fade-up"><i class="fas fa-chalkboard-user" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>Leadership & Training</h3><p>Mediation, strategic governance, program management, mentorship.</p><div><span class="skill-tag">Project Mgt</span><span class="skill-tag">Conflict resolution</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- Services Section -->
+<!-- Services -->
 <section id="services">
   <div class="container">
-    <span class="section-tag">What I Deliver</span>
+    <span class="section-tag">What I Offer</span>
     <h2 class="section-title">Consulting, training & digital solutions</h2>
     <p class="section-sub">Tailored for NGOs, SMEs, churches, schools, and development partners.</p>
     <div class="services-grid">
-      <div class="card-elegant fade-up"><i class="fas fa-calculator" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>Financial Systems Consulting</h3><p>Policy design, donor compliance, budget dashboards, ERP integration, audit readiness.</p></div>
-      <div class="card-elegant fade-up"><i class="fas fa-laptop-code" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>ICT & Digital Transformation</h3><p>Custom web applications, MIS, Power BI analytics, database architecture.</p></div>
-      <div class="card-elegant fade-up"><i class="fas fa-chalkboard" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>Leadership Training</h3><p>Workshops on governance, accountability, entrepreneurship & mediation.</p></div>
-      <div class="card-elegant fade-up"><i class="fas fa-hands-helping" style="font-size: 1.8rem; color: var(--accent-gold);"></i><h3>Mentorship & Coaching</h3><p>Career mentorship for professionals, financial literacy, values-based leadership.</p></div>
-      <div class="card-elegant service-featured fade-up"><div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between;"><div><h3 style="font-size:1.5rem;">Organizational Systems Design</h3><p>Unified finance + ICT + governance blueprint for organizations ready to scale.</p></div><div><span class="skill-tag" style="background:#F5EFE0;">Grant mgmt & M&E</span> <span class="skill-tag">Inventory controls</span> <span class="skill-tag">College MIS</span></div></div></div>
+      <div class="card-elegant fade-up"><i class="fas fa-calculator" style="font-size: 1.6rem; color: var(--accent-gold);"></i><h3>Financial Systems Consulting</h3><p>Policy design, donor compliance, budget dashboards, ERP integration.</p></div>
+      <div class="card-elegant fade-up"><i class="fas fa-laptop-code" style="font-size: 1.6rem; color: var(--accent-gold);"></i><h3>ICT & Digital Transformation</h3><p>Custom web apps, MIS, Power BI analytics, database architecture.</p></div>
+      <div class="card-elegant fade-up"><i class="fas fa-chalkboard" style="font-size: 1.6rem; color: var(--accent-gold);"></i><h3>Leadership Training</h3><p>Workshops on governance, accountability, and mediation skills.</p></div>
+      <div class="card-elegant service-featured fade-up"><div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;"><div><h3 style="font-size:1.3rem;">Organizational Systems Design</h3><p>Unified finance + ICT + governance blueprint for scaling organizations.</p></div><div><span class="skill-tag" style="background:#F5EFE0;">Grant mgmt</span><span class="skill-tag">Inventory controls</span></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- Experience Timeline -->
+<!-- Experience Short Timeline -->
 <section id="experience">
   <div class="container">
     <div style="display: grid; grid-template-columns: 1fr 0.8fr; gap: 3rem;">
       <div>
         <span class="section-tag">Career Timeline</span>
-        <h2 class="section-title">A decade of measurable impact</h2>
+        <h2 class="section-title">A decade of impact</h2>
         <div class="timeline">
-          <div class="timeline-item"><div class="timeline-dot"></div><span style="color: var(--accent-gold); font-weight:600;">2021 – 2024</span><h3 style="margin: 0.3rem 0;">Project Coordinator</h3><p style="color: var(--gray-700);">Led child protection & family empowerment programs, strategic partnerships, impacted 1,200+ beneficiaries.</p></div>
-          <div class="timeline-item"><div class="timeline-dot"></div><span style="color: var(--accent-gold);">2013 – 2021</span><h3>Project Accountant</h3><p>Multi-donor grant compliance, improved audit ratings, managed multi-million KES grants, youth entrepreneurship training.</p></div>
-          <div class="timeline-item"><div class="timeline-dot"></div><span style="color: var(--accent-gold);">2009 – 2012</span><h3>Inventory Controller</h3><p>Stock accuracy, variance analysis, loss reduction, process optimization in retail.</p></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><span style="color: var(--accent-gold); font-weight:600;">2021 – 2024</span><h3 style="margin: 0.3rem 0;">Project Coordinator</h3><p>Led community programs & strategic partnerships, impacted 1,200+ beneficiaries.</p></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><span style="color: var(--accent-gold);">2013 – 2021</span><h3>Project Accountant</h3><p>Multi-donor grant compliance, audit readiness, managed KES 45M+ budget.</p></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><span style="color: var(--accent-gold);">2009 – 2012</span><h3>Inventory Controller</h3><p>Stock accuracy, variance analysis, process optimization.</p></div>
         </div>
       </div>
-      <div class="card-elegant" style="align-self: start;"><h3>Professional Snapshot</h3><div style="display: flex; justify-content: space-between; margin: 1rem 0;"><span>Experience</span><strong style="color: var(--accent-gold);">10+ years</strong></div><div style="display: flex; justify-content: space-between;"><span>Budget managed</span><strong style="color: var(--accent-gold);">KES 45M+</strong></div><hr style="margin: 1rem 0;"><p><i class="fas fa-certificate" style="color: var(--accent-gold);"></i> CPA-K Finalist · BA Leadership · Certified Mediator</p><p style="margin-top: 1rem;"><i class="fas fa-globe"></i> Nairobi – Remote & onsite availability</p></div>
+      <div class="card-elegant" style="align-self: start;"><h3>Quick Facts</h3><div style="display: flex; justify-content: space-between; margin: 1rem 0;"><span>Experience</span><strong style="color: var(--accent-gold);">10+ years</strong></div><div style="display: flex; justify-content: space-between;"><span>Budget managed</span><strong style="color: var(--accent-gold);">KES 45M+</strong></div><hr style="margin: 1rem 0;"><p><i class="fas fa-certificate" style="color: var(--accent-gold);"></i> CPA-K · BA Leadership · Certified Mediator</p></div>
     </div>
   </div>
 </section>
 
-<!-- Contact with EmailJS Integration -->
+<!-- WhatsApp Connect Section -->
+<section id="whatsapp">
+  <div class="container">
+    <div class="whatsapp-section fade-up">
+      <i class="fab fa-whatsapp" style="font-size: 2.8rem; color: #25D366; margin-bottom: 0.5rem; display: inline-block;"></i>
+      <h3 style="color: white; font-size: 1.6rem;">Quick consultation? Let's chat</h3>
+      <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">Reach out directly on WhatsApp for fast responses.</p>
+      <a href="https://wa.me/254734080808?text=Hello%20Daniel%2C%20I'm%20interested%20in%20your%20consulting%20services." class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> Chat on WhatsApp
+      </a>
+      <p style="margin-top: 1rem; font-size: 0.75rem; color: rgba(255,255,255,0.5);">+254 734 080808 | +254 722 699212</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact with EmailJS -->
 <section id="contact">
   <div class="container">
     <div class="contact-wrapper">
-      <div><span class="section-tag">Start a conversation</span><h2 class="section-title" style="font-size: 2rem;">Let's build transformative solutions</h2><p class="section-sub" style="margin-bottom: 1.5rem;">Financial audits, digital tools, leadership frameworks — one conversation can unlock new potential.</p><div style="display: flex; gap: 1rem; flex-direction: column;"><div><i class="fas fa-envelope" style="color: var(--accent-gold); width: 2rem;"></i> danyelthuo@gmail.com</div><div><i class="fas fa-phone-alt"></i> +254 734 080808 / +254 722 699212</div><div><i class="fas fa-map-pin"></i> Nairobi, Kenya (remote & onsite)</div><div><i class="fab fa-whatsapp" style="color: var(--whatsapp-green); width: 2rem;"></i> <a href="https://wa.me/254734080808" target="_blank" style="color: var(--primary-dark); text-decoration: none;">Chat on WhatsApp</a></div></div></div>
-      <div><h3 style="margin-bottom: 1.5rem;">Send a professional inquiry</h3>
+      <div><span class="section-tag">Get in Touch</span><h2 class="section-title" style="font-size: 1.8rem;">Let's work together</h2><p class="section-sub" style="margin-bottom: 1.2rem;">Financial audits, digital systems, leadership training — start a conversation.</p><div style="display: flex; gap: 1rem; flex-direction: column;"><div><i class="fas fa-envelope" style="color: var(--accent-gold); width: 2rem;"></i> danyelthuo@gmail.com</div><div><i class="fas fa-phone-alt"></i> +254 734 080808</div><div><i class="fab fa-whatsapp" style="color: var(--whatsapp-green);"></i> <a href="https://wa.me/254734080808" target="_blank" style="color: var(--primary-dark);">WhatsApp</a></div></div></div>
+      <div><h3 style="margin-bottom: 1.2rem;">Send a message</h3>
         <form id="contactForm">
-          <div class="form-group"><input type="text" id="firstName" placeholder="First name" class="form-control" required></div>
-          <div class="form-group"><input type="text" id="lastName" placeholder="Last name" class="form-control" required></div>
+          <div style="display: grid; grid-template-columns:1fr 1fr; gap: 1rem; margin-bottom: 1rem;"><input type="text" id="firstName" placeholder="First name" class="form-control" required><input type="text" id="lastName" placeholder="Last name" class="form-control" required></div>
           <div class="form-group"><input type="email" id="email" placeholder="Email address" class="form-control" required></div>
-          <div class="form-group"><select id="service" class="form-control" required><option value="">Select service of interest</option><option>Financial Systems Consulting</option><option>ICT / Web Development</option><option>Leadership Training</option><option>Organizational Systems Design</option><option>Mentorship & Coaching</option></select></div>
-          <div class="form-group"><textarea id="message" rows="4" placeholder="Tell me about your project or need..." class="form-control" required></textarea></div>
+          <div class="form-group"><select id="service" class="form-control" required><option value="">Service of interest</option><option>Financial Systems Consulting</option><option>ICT / Web Development</option><option>Leadership Training</option></select></div>
+          <div class="form-group"><textarea id="message" rows="3" placeholder="Tell me about your project..." class="form-control" required></textarea></div>
           <button type="submit" class="btn-submit" id="sendBtn"><i class="fas fa-paper-plane"></i> Send Message</button>
         </form>
-        <div id="formStatus" style="margin-top: 1rem; font-size: 0.85rem; text-align: center;"></div>
+        <div id="formStatus" style="margin-top: 1rem; font-size: 0.8rem; text-align: center;"></div>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container"><p>© 2025 Daniel Thuo — Finance, ICT & Leadership Consultant. Nairobi, Kenya</p><div style="margin-top: 1rem;"><a href="#" style="color: var(--accent-gold); margin: 0 12px; text-decoration: none;">LinkedIn</a><a href="https://github.com/danielkthuo" style="color: var(--accent-gold); text-decoration: none;">GitHub</a><a href="https://wa.me/254734080808" style="color: var(--whatsapp-green); margin-left: 12px; text-decoration: none;"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+  <div class="container"><p>© 2025 Daniel Thuo — Finance, ICT & Leadership Consultant · Nairobi, Kenya</p><div style="margin-top: 0.8rem;"><a href="https://wa.me/254734080808" style="color: var(--accent-gold); text-decoration: none;"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
 </footer>
-<div id="toastMsg" class="toast-message"></div>
 
 <script>
-  // Initialize EmailJS (Public Key - replace with actual after signup)
-  (function() {
-    // Register at emailjs.com and replace with your public key
-    emailjs.init("YOUR_PUBLIC_KEY"); 
-  })();
+  // EmailJS initialization (replace with your credentials for production)
+  (function() { emailjs.init("YOUR_PUBLIC_KEY"); })();
 
   const form = document.getElementById('contactForm');
-  const statusDiv = document.getElementById('formStatus');
-  const toast = document.getElementById('toastMsg');
-
-  function showToast(message, isError = false) {
-    toast.style.backgroundColor = isError ? '#C62828' : '#0A2540';
-    toast.innerHTML = message;
-    toast.style.opacity = '1';
-    setTimeout(() => { toast.style.opacity = '0'; }, 4000);
-  }
-
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    const sendBtn = document.getElementById('sendBtn');
-    sendBtn.disabled = true;
-    sendBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
+    const btn = document.getElementById('sendBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    
     const templateParams = {
       from_name: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
       from_email: document.getElementById('email').value,
       service_type: document.getElementById('service').value,
       message: document.getElementById('message').value,
-      to_name: 'Daniel Thuo',
-      reply_to: document.getElementById('email').value
+      to_name: 'Daniel Thuo'
     };
-
-    // Replace with your actual EmailJS Service ID & Template ID after registration
+    
     emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-      .then(function(response) {
-        statusDiv.innerHTML = '<span style="color: #2e7d32;">✓ Message sent successfully! Daniel will respond within 24 hours.</span>';
-        form.reset();
-        showToast('Message delivered successfully!');
-      }, function(error) {
-        statusDiv.innerHTML = '<span style="color: #d32f2f;">❌ Failed to send. Please email directly: danyelthuo@gmail.com or WhatsApp +254734080808</span>';
-        showToast('Error sending message, please try again or use direct contact.', true);
-        console.error(error);
-      })
-      .finally(() => {
-        sendBtn.disabled = false;
-        sendBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-        setTimeout(() => { if(statusDiv.innerHTML) statusDiv.innerHTML = ''; }, 5000);
-      });
+      .then(() => { document.getElementById('formStatus').innerHTML = '<span style="color:#2e7d32;">✓ Message sent! Daniel will respond soon.</span>'; form.reset(); })
+      .catch(() => { document.getElementById('formStatus').innerHTML = '<span style="color:#d32f2f;">❌ Failed to send. Please email directly: danyelthuo@gmail.com</span>'; })
+      .finally(() => { btn.disabled = false; btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message'; setTimeout(() => { if(document.getElementById('formStatus').innerHTML) document.getElementById('formStatus').innerHTML = ''; }, 4000); });
   });
 
-  // Intersection Observer for animations
-  const fadeElements = document.querySelectorAll('.fade-up');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  fadeElements.forEach(el => observer.observe(el));
+  // Animation Observer
+  const faders = document.querySelectorAll('.fade-up');
+  const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+  faders.forEach(el => obs.observe(el));
 
-  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const target = document.querySelector(this.getAttribute('href'));
       if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
-  });
-  window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.navbar');
-    nav.style.boxShadow = window.scrollY > 20 ? '0 4px 20px rgba(0,0,0,0.05)' : 'none';
   });
 </script>
 </body>
